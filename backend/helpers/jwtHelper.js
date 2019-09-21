@@ -9,6 +9,7 @@ var publicKEY = fs.readFileSync('./config/public.key', 'utf8');
 var i = 'MUM';          // Issuer 
 var s = 'some@user.com';        // Subject 
 var a = 'http://mysoftcorp.in'; // Audience// SIGNING OPTIONS
+
 var signOptions = {
     issuer: i,
     subject: s,
