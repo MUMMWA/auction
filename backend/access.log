@@ -612,3 +612,15 @@
 ::ffff:127.0.0.1 - - [21/Sep/2019:15:22:46 +0000] "POST /api/Users/findbyemail HTTP/1.1" 200 39
 ::ffff:127.0.0.1 - - [21/Sep/2019:15:23:15 +0000] "OPTIONS /api/Users/signup HTTP/1.1" 204 0
 ::ffff:127.0.0.1 - - [21/Sep/2019:15:23:15 +0000] "POST /api/Users/signup HTTP/1.1" 200 56
+::ffff:127.0.0.1 - - [21/Sep/2019:19:57:19 +0000] "OPTIONS /api/Users/signin HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:19:57:20 +0000] "POST /api/Users/signin HTTP/1.1" 200 444
+::ffff:127.0.0.1 - - [21/Sep/2019:19:57:48 +0000] "OPTIONS /api/Users/signup HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:19:57:48 +0000] "POST /api/Users/signup HTTP/1.1" 200 56
+::ffff:127.0.0.1 - - [21/Sep/2019:22:42:18 +0000] "OPTIONS /api/Users/signup HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:22:42:18 +0000] "POST /api/Users/signup HTTP/1.1" 200 39
+::ffff:127.0.0.1 - - [21/Sep/2019:22:42:31 +0000] "OPTIONS /api/Users/signin HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:22:42:31 +0000] "POST /api/Users/signin HTTP/1.1" 200 453
+::ffff:127.0.0.1 - - [21/Sep/2019:22:47:22 +0000] "OPTIONS /api/Users/signin HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:22:47:22 +0000] "POST /api/Users/signin HTTP/1.1" 200 453
+::ffff:127.0.0.1 - - [21/Sep/2019:22:49:01 +0000] "OPTIONS /api/Users/signin HTTP/1.1" 204 0
+::ffff:127.0.0.1 - - [21/Sep/2019:22:49:01 +0000] "POST /api/Users/signin HTTP/1.1" 200 468

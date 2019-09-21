@@ -13,12 +13,15 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/register']" *ngIf="!currentUser">register</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</a>
         </li>
       </ul>
       <a class="nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
       <span class="navbar-text" *ngIf="currentUser">
           Hello, {{currentUser.firstName}}
-         
+       
       </span>
     </div>
   </nav>

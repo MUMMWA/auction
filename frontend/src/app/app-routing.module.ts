@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }, //, canActivate: [ProtectedGuard]
+  { path: 'productmgmt', component: RegisterComponent, canActivate: [ProtectedGuard] }, //, canActivate: [ProtectedGuard]
   { path: 'home', redirectTo: '' },
   { path: '**', redirectTo: '' }
 ];

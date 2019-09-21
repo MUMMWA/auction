@@ -10,7 +10,8 @@ router.post('/signup', async function (req, res, next) {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        role: 'normal'
     });
 
     let existUser = await User.find().findUserByEmail(req.body.email);
@@ -53,7 +54,7 @@ router.post('/signin', async function (req, res, next) {
 
         res.json({
             success: 1, msg: 'User exist',
-            user: { id: existUser._id, email: existUser.email, firstName: existUser.firstName, lastName: existUser.lastName, token: token }
+            user: { id: existUser._id, email: existUser.email, firstName: existUser.firstName, lastName: existUser.lastName, role: existUser.role, token: token }
         });
     }
     else {
