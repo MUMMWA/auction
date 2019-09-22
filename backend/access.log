@@ -624,3 +624,5 @@
 ::ffff:127.0.0.1 - - [21/Sep/2019:22:47:22 +0000] "POST /api/Users/signin HTTP/1.1" 200 453
 ::ffff:127.0.0.1 - - [21/Sep/2019:22:49:01 +0000] "OPTIONS /api/Users/signin HTTP/1.1" 204 0
 ::ffff:127.0.0.1 - - [21/Sep/2019:22:49:01 +0000] "POST /api/Users/signin HTTP/1.1" 200 468
+::1 - - [22/Sep/2019:00:04:01 +0000] "GET / HTTP/1.1" 404 139
+::1 - - [22/Sep/2019:00:04:06 +0000] "GET /users HTTP/1.1" 404 144
