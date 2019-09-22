@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './_interceptors/jwt.interceptors';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material-module';
+import { AuthenticationService } from './_services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AngularMaterialModule } from './material-module';
     BrowserAnimationsModule,
 
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
