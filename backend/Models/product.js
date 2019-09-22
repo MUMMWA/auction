@@ -6,7 +6,7 @@ var productSchema = mongoose.Schema({
     description: String,
     start_time: Date,
     end_time: Date,
-    images: [String]
+    images: [Object]
 },
     {
         timestamps: true
