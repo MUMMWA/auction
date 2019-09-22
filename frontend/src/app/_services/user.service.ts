@@ -18,5 +18,4 @@ export class UserService {
     return this.http.post(`http://localhost:8888/api/Users/findbyemail`, { email: email });
   }
 
-
 }
