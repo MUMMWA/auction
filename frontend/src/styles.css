@@ -27,3 +27,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-grid-tile .mat-figure {
     margin: 30px !important;
 }
+.mat-card-image {
+    width:75% !important;
+    margin: 0 auto !important;
+}
+.card-image {
+    padding: 15px;
+    height: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+countdown {
+    font-weight: bold;
+    font-size: 25px;
+}
