@@ -1,0 +1,18 @@
+###
+GET http://localhost:8888/api/products/protected/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkODQzYWJiMTM1MmY3MmQ5MDc0MTRmMCIsImlhdCI6MTU2OTAxNTMxMCwiZXhwIjoxNTcxNjA3MzEwLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik1VTSIsInN1YiI6InNvbWVAdXNlci5jb20ifQ.iCnpcJDByJT2bb22yIIiL3IhHn93779gFObnfSf1kes2UgmedDF2KLs9-BqV_zqtbp7qftaAtB1h5Sh6Wz5kuA
+####
+
+POST http://localhost:8888/api/products/protected/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkODQzYWJiMTM1MmY3MmQ5MDc0MTRmMCIsImlhdCI6MTU2OTAxNTMxMCwiZXhwIjoxNTcxNjA3MzEwLCJhdWQiOiJodHRwOi8vbXlzb2Z0Y29ycC5pbiIsImlzcyI6Ik1VTSIsInN1YiI6InNvbWVAdXNlci5jb20ifQ.iCnpcJDByJT2bb22yIIiL3IhHn93779gFObnfSf1kes2UgmedDF2KLs9-BqV_zqtbp7qftaAtB1h5Sh6Wz5kuA
+
+{
+    "name": "IphoneXS",
+    "description": "his phone is locked to Simple Mobile from Tracfone, which means this device can only be used on the Simple Mobile wireless network. ",
+    "start_time": "2019-09-22 10:00",
+    "end_time": "2019-10-22 10:00",
+    "images":["https://i.ibb.co/NTjTbtN/Iphone.jpg"]
+}
+####

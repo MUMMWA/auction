@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const authorization = require('./MiddleWare/authorization');
 const userRouter = require('./Routes/userRouter');
+const productRouter=require('./Routes/productRouter');
 
 
 //init
@@ -26,12 +27,12 @@ app.use(helmet());
 app.use(cors());
 //custom middleware
 app.use('/api/Users/protected', authorization);
-
+app.use('/api/products/protected', authorization);
 
 
 //Routing
 app.use('/api/Users', userRouter);
-
+app.use('/api/products/protected', productRouter);
 
 
 //Error handling
