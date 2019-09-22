@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material-module';
 import { AuthenticationService } from './_services/authentication.service';
 import { ProductsComponent } from './products/products.component';
+import { TrimPipe } from './_pipes/trim.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductsComponent } from './products/products.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    ProductsComponent
+    ProductsComponent,
+    TrimPipe
   ],
   imports: [
     BrowserModule,
