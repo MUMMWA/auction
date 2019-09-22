@@ -7,25 +7,36 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" routerLink="/">Home
+                <a class="nav-link">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/login']" *ngIf="!currentUser">login</a>
+                <a class="nav-link">login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/register']" *ngIf="!currentUser">register</a>
+                <a class="nav-link">register</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</a>
+                <a class="nav-link"></a>
             </li>
         </ul>
-        <a class="nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+        <a class="nav-link"></a>
+
+    </div>
+</nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span routerLink="/">Auction</span>
+        <span [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</span>
+        <span class="example-spacer"></span>
+        <button mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser">Login</button>
+        <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
+        <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
         <span class="navbar-text" *ngIf="currentUser">
             Hello, {{currentUser.firstName}}
 
         </span>
-    </div>
-</nav>
+    </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>
