@@ -3,7 +3,7 @@
         <span routerLink="/">Auction</span>
         <span [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</span>
         <span class="example-spacer"></span>
-        <button mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser">Login</button>
+        <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
         <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
         <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
         <span class="navbar-text" *ngIf="currentUser">

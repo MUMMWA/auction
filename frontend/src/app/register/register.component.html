@@ -1,55 +1,48 @@
-<div class="container">
-    <h2>Register</h2>
-    <div class="alert alert-danger" *ngIf="error">
-        <strong>Error!</strong> {{error}}
-    </div>
-    <div class="alert alert-info" role="alert" *ngIf="message">
-        {{message}}
-    </div>
+<div class="container card-center-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Register</mat-card-title>
+            <mat-card-subtitle>User your email to login</mat-card-subtitle>
+        </mat-card-header>
 
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" formControlName="firstName" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        <mat-card-content>
+            <div class="alert alert-danger" *ngIf="error">
+                <strong>Error!</strong> {{error}}
             </div>
-        </div>
-        <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" formControlName="lastName" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            <div class="alert alert-info" role="alert" *ngIf="message">
+                {{message}}
             </div>
-        </div>
-        <div class="form-group">
-            <label for="email">Username</label>
-            <input type="text" formControlName="email" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-                <div *ngIf="f.email.errors.email">Write valid email address</div>
-                <div *ngIf="f.email.errors.usernameInUse">User with this email already exist</div>
-                <!-- <div *ngFor="let item of f.email.errors | keyvalue">
-                    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
-                </div> -->
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" formControlName="password" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                <div *ngIf="f.password.errors.required">Password is required</div>
-                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-            </div>
-        </div>
-        <div class="form-group">
-            <button [disabled]="loading" class="btn btn-primary">Register</button>
-            <img *ngIf="loading" src="../../assets/img/loading.gif" />
-            <a [routerLink]="['/home']" class="btn btn-link">Cancel</a>
-        </div>
-    </form>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width-input ">
+                    <input matInput placeholder="First Name" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                    <mat-error *ngIf="submitted && f.firstName.errors && f.firstName.errors.required">FirstName is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input ">
+                    <input matInput placeholder="lastName" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                    <mat-error *ngIf="submitted && f.lastName.errors && f.lastName.errors.required">lastName is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input ">
+                    <input matInput placeholder="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.required">email is required</mat-error>
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.email">Write valid email address</mat-error>
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.usernameInUse">User with this email already exist</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input ">
+                    <input matInput placeholder="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <mat-error *ngIf="submitted && f.password.errors && f.password.errors.required">password is required</mat-error>
+                    <mat-error *ngIf="submitted && f.password.errors && f.password.errors.minlength">Password must be at least 6 characters</mat-error>
+
+                </mat-form-field>
+
+
+                <button class="mt-15" mat-raised-button color="primary" [disabled]="loading">Register</button>
+                <img *ngIf="loading" src="../../assets/img/loading.gif" />
+            </form>
+        </mat-card-content>
+    </mat-card>
+    <a [routerLink]="['/login']" class="mt-15">Already Have an account</a>
 </div>

@@ -1,4 +1,4 @@
-<div class="container login-container">
+<div class="container card-center-container">
     <mat-card>
         <mat-card-header>
             <mat-card-title>Login</mat-card-title>
@@ -10,25 +10,23 @@
                 <strong>Error!</strong> {{error}}
             </div>
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal">
-                <mat-form-field>
+                <mat-form-field class="full-width-input ">
                     <input matInput placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
                     <mat-error *ngIf="submitted && f.email.errors && f.email.errors.required">Email is required</mat-error>
-                    <mat-error *ngIf="submitted && f.email.errors &&f.email.errors.email">Write valid email address</mat-error>
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.email">Write valid email address</mat-error>
                 </mat-form-field>
 
-                <mat-form-field>
+                <mat-form-field class="full-width-input ">
                     <input matInput placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
                     <mat-error *ngIf="submitted && f.password.errors && f.password.errors.required">Password is required</mat-error>
 
                 </mat-form-field>
 
-                <img *ngIf="loading" src="../../assets/img/loading.gif" />
 
+                <button class="mt-15" mat-raised-button color="primary" [disabled]="loading">Login</button>
+                <img *ngIf="loading" src="../../assets/img/loading.gif" />
             </form>
         </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button color="primary" [disabled]="loading">Login</button>
-        </mat-card-actions>
     </mat-card>
     <a [routerLink]="['/register']" class="mt-15">Don't have an account?</a>
 </div>
