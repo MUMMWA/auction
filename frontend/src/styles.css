@@ -33,7 +33,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .card-image {
     padding: 15px;
-    height: 300px;
+    height: 270px;
     text-align: center;
     overflow: hidden;
 }

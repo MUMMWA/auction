@@ -42,12 +42,12 @@ import { TrimPipe } from './_pipes/trim.pipe';
     HttpClientModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
-    OwlDateTimeModule, 
+    OwlDateTimeModule,
     OwlNativeDateTimeModule,
     CountdownModule
 
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService,ProductsService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
