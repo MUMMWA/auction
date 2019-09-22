@@ -6,7 +6,10 @@
 html, body { height: 100%; background: #eee; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
+.container {
+    max-width: 1170px;
+    margin: 0 auto
+}
 .card-center-container {
     margin: 100px auto;
     max-width: 600px;
@@ -20,4 +23,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mt-15 {
     margin-top: 15px;
     display: block;
+}
+.mat-grid-tile .mat-figure {
+    margin: 30px !important;
 }

@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <span routerLink="/">Auction</span>
+        <span routerLink="/products">Products</span>
         <span [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</span>
         <span class="example-spacer"></span>
         <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
