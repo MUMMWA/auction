@@ -18,6 +18,7 @@ app.disable('x-powered-by');
 
 //MiddleWare
 app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 // setup the logger
 app.use(morgan('common', { stream: accessLogStream }));
