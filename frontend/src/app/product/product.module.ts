@@ -8,7 +8,7 @@ import {CountdownModule} from "ngx-countdown";
 
 
 @NgModule({
-  declarations: [ProductComponent,TrimPipe],
+  declarations: [ProductComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,

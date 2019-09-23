@@ -6,6 +6,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProtectedGuard } from './_guards/protected.guard';
 import { ProductsComponent } from './products/products.component';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import {ProductComponent} from "./product/product.component";
+import {PaymentComponent} from "./payments/payment.component";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
 
 
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'payment', component: PaymentComponent },
   { path: '**', redirectTo: '' }
 ];
 
