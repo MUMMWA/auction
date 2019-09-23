@@ -27,6 +27,7 @@ import { TrimPipe } from './_pipes/trim.pipe';
 import {ProductModule} from "./product/product.module";
 import {PaymentModule} from "./payments/payment.module";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
+import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AdminListProductsComponent } from './admin-list-products/admin-list-pro
     ProductsComponent,
     AdminAddProductComponent,
     TrimPipe,
-    AdminListProductsComponent
+    AdminListProductsComponent,
+    ConfirmDialogeComponent
 
   ],
   imports: [
