@@ -32,7 +32,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="full-width-input ">
-                    <input matInput placeholder="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <input matInput placeholder="password" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
                     <mat-error *ngIf="submitted && f.password.errors && f.password.errors.required">password is required</mat-error>
                     <mat-error *ngIf="submitted && f.password.errors && f.password.errors.minlength">Password must be at least 6 characters</mat-error>
 

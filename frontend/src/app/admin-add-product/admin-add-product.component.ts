@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../_services/products.service';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductModel } from '../_models/product.Model';
 
 @Component({
   selector: 'app-admin-add-product',
@@ -30,7 +31,7 @@ export class AdminAddProductComponent implements OnInit {
 
   initItemRows() {
     return this.formBuilder.group({
-      imageUrl: ['',Validators.required]
+      imageUrl: ['', Validators.required]
     });
   }
 
@@ -46,8 +47,6 @@ export class AdminAddProductComponent implements OnInit {
     this.formArr.removeAt(index);
   }
 
- 
-
   onSubmit() {
     this.submitted = true;
     if (this.addForm.invalid) {
@@ -59,17 +58,20 @@ export class AdminAddProductComponent implements OnInit {
       this.productsService.addProduct(this.addForm.value)
         .subscribe(data => {
           if (data['success'] === 1) {
-            this.message = data['msg']
+            this.message = data['msg'];
+            this.addForm.reset();
+            this.addForm.pristine;
+            this.addForm.untouched;
+            this.addForm.clearValidators;
           }
           else {
             this.error = data['msg'];
           }
-          //this.router.navigate(['']);
-          this.loading = true;
+          this.loading = false;
+
         });
     }
   }
-
 
   get f() { return this.addForm.controls; }
 

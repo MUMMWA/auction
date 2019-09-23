@@ -3,7 +3,7 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "../node_modules/ng-pick-datetime/assets/style/picker.min.css";
 
-html, body { height: 100%; background: #eee; }
+html, body { height: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
@@ -23,6 +23,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mt-15 {
     margin-top: 15px;
     display: block;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+
+}
+.mr-15 {
+    margin-right: 15px !important;
 }
 .mat-grid-tile .mat-figure {
     margin: 30px !important;

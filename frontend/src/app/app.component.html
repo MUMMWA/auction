@@ -1,24 +1,64 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span routerLink="/">Auction</span>
-        <span routerLink="/products">Products</span>
+<div class="site-navbar bg-white py-2">
+    <div class="search-wrap">
+        <div class="container">
+            <a href="#" class="search-close js-search-close">
+                <span class="icon-close2"></span>
+            </a>
+        </div>
+    </div>
 
-        <button mat-button [matMenuTriggerFor]="menu" *ngIf="currentUser && currentUser.role==='admin'">Products
-            Managment</button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item [routerLink]="['productmgmt','add']">Add Products</button>
-            <button mat-menu-item [routerLink]="['productmgmt','list']">List Products</button>
-        </mat-menu>
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <div class="site-logo">
+                    <a routerLink="/" class="js-logo-clone">Auction</a>
+                </div>
+            </div>
+            <div class="main-nav d-none d-lg-block">
+                <nav class="site-navigation text-right text-md-center" role="navigation">
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li class="has-children active" *ngIf="currentUser && currentUser.role==='admin'">
+                            <a>Admin</a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a [routerLink]="['productmgmt','add']">Add Product</a>
+                                </li>
+                                <li>
+                                    <a [routerLink]="['productmgmt','list']">Products List</a>
+                                </li>
 
-        <span class="example-spacer"></span>
-        <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser"
-            routerLink>Login</button>
-        <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
-        <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
-        <span class="navbar-text" *ngIf="currentUser">
-            Hello, {{currentUser.firstName}}
+                            </ul>
+                        </li>
 
-        </span>
-    </mat-toolbar-row>
-</mat-toolbar>
+                        <li>
+                            <a routerLink="/products">Products</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="icons">
+
+                <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
+                <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
+                <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
+                <span class="navbar-text" *ngIf="currentUser">
+                    Hello, {{currentUser.firstName}}
+                </span>
+
+                <a href="#" class="icons-btn d-inline-block">
+                    <span class="icon-heart-o"></span>
+                </a>
+                <a href="#" class="icons-btn d-inline-block bag">
+                    <span class="icon-bell"></span>
+                    <span class="number">2</span>
+                </a>
+                <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none">
+                    <span class="icon-menu"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <router-outlet></router-outlet>
