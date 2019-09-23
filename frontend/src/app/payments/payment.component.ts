@@ -26,7 +26,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./payment.css']
 })
 export class PaymentComponent implements AfterViewInit, OnDestroy {
-  @ViewChild("cardInfo") cardInfo: ElementRef;
+  @ViewChild("cardInfo",{static:true}) cardInfo: ElementRef;
+
   card: any;
   cardHandler = this.onChange.bind(this);
   error: string;
