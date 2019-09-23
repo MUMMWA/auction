@@ -1,24 +1,30 @@
 <div class="container card-center-container">
+    <div class="alert alert-danger" *ngIf="error">
+        <strong>Error!</strong> {{error}}
+    </div>
     <mat-card>
         <mat-card-header>
             <mat-card-title>Login</mat-card-title>
-            <mat-card-subtitle>User your email to login</mat-card-subtitle>
+            <mat-card-subtitle>Use your email to login</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
-            <div class="alert alert-danger" *ngIf="error">
-                <strong>Error!</strong> {{error}}
-            </div>
+
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal">
                 <mat-form-field class="full-width-input ">
-                    <input matInput placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.required">Email is required</mat-error>
-                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.email">Write valid email address</mat-error>
+                    <input matInput placeholder="Email" formControlName="email"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.required">Email is required
+                    </mat-error>
+                    <mat-error *ngIf="submitted && f.email.errors && f.email.errors.email">Write valid email address
+                    </mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="full-width-input ">
-                    <input matInput placeholder="Password" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-                    <mat-error *ngIf="submitted && f.password.errors && f.password.errors.required">Password is required</mat-error>
+                    <input matInput placeholder="Password" type="password" formControlName="password"
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <mat-error *ngIf="submitted && f.password.errors && f.password.errors.required">Password is required
+                    </mat-error>
 
                 </mat-form-field>
 

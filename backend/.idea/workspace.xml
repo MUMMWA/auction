@@ -2,16 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/payment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/bids.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiddleWare/authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/MiddleWare/authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/paymentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/bidsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/userRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Routes/publicProductRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/admin-list-products/admin-list-products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/admin-list-products/admin-list-products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/admin-list-products/admin-list-products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/admin-list-products/admin-list-products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/confirm-dialoge/confirm-dialoge.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/confirm-dialoge/confirm-dialoge.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payments/payment.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payments/payment.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/products/products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/products/products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,20 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="2067" selection-start-line="2067" selection-end-line="2067" />
+            <state relative-caret-position="900">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
@@ -74,8 +79,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MiddleWare/authorization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+            <state relative-caret-position="210">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -141,10 +155,10 @@
         <option value="$PROJECT_DIR$/Models/user.js" />
         <option value="$PROJECT_DIR$/Controllers/payment.controller.js" />
         <option value="$PROJECT_DIR$/Routes/bidsRouter.js" />
+        <option value="$PROJECT_DIR$/Routes/userRouter.js" />
+        <option value="$PROJECT_DIR$/Controllers/bids.controller.js" />
         <option value="$PROJECT_DIR$/MiddleWare/authorization.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/Controllers/bids.controller.js" />
-        <option value="$PROJECT_DIR$/Routes/userRouter.js" />
       </list>
     </option>
   </component>
@@ -249,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
-      <workItem from="1569264699621" duration="15747000" />
+      <workItem from="1569264699621" duration="16034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15747000" />
+    <option name="totallyTimeSpent" value="16034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -309,13 +323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -330,13 +337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="62" column="11" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="62" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiddleWare/authorization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -377,8 +377,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="900">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiddleWare/authorization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

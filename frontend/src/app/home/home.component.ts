@@ -3,6 +3,7 @@ import { User } from '../_models/User';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../_services/authentication.service';
 import { Router } from '@angular/router';
+import { ProductsService } from '../_services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +15,33 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentUserSubscription: Subscription;
 
 
-  constructor(private authenticationService: AuthenticationService, private router: Router) {
+  constructor(private productsService: ProductsService, private authenticationService: AuthenticationService, private router: Router) {
 
     this.currentUserSubscription = this.authenticationService.currentUser
       .subscribe(user => this.currentUser = user);
   }
-
+  products = [];
+  productsArray = [];
   ngOnInit() {
+    this.productsService.getAllPublicProducts()
+      .subscribe(
+        res => {
+          this.products = res['products'];
+          this.productsArray = this.products.map(product => {
+            let p = {
+              ...product,
+              timer: (
+                new Date(product.end_time).getTime() / 1000) - (new Date().getTime() / 1000)
+            };
+            localStorage.setItem(p._id, JSON.stringify(p));
+            return p;
+
+          }
+          );
+          console.log(this.productsArray);
+        },
+        error => console.log(error)
+      )
   }
 
   ngOnDestroy(): void {
@@ -30,5 +51,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
+  }
+
+  goToProduct(product) {
+    this.router.navigate(['product', product._id]);
   }
 }

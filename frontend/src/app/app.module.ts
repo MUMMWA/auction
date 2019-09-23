@@ -60,6 +60,9 @@ import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.compo
 
 
   ],
+  entryComponents: [
+    ConfirmDialogeComponent
+  ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService, ProductsService],
   bootstrap: [AppComponent]
 })

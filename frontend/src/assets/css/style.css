@@ -158,9 +158,11 @@ a {
     position: relative; }
 
 .site-navbar {
-  margin-bottom: 0px;
+  margin-bottom: 0px; 
   width: 100%;
-  background: transparent !important; }
+  position: relative;
+  z-index: 1000;
+  background: #f1f1f1 !important; }
   .site-navbar.position-relative {
     position: relative;
     background: #f9f9f9 !important; }
@@ -1088,4 +1090,19 @@ a {
   .product-image {
     max-height: 180px;
     margin-top: 30px;
+}
+.banner-img {
+  margin-bottom: -170px;
+}
+.btn-danger, .btn-primary {
+  color: #fff !important;
+}
+
+.product-box {
+  padding: 100px 0;
+  text-align: center;
+  
+}
+.product-box .img-fluid {
+  max-width: 80% !important;
 }

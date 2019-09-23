@@ -10,6 +10,8 @@ const authorization = require('./MiddleWare/authorization');
 const userRouter = require('./Routes/userRouter');
 const productRouter=require('./Routes/productRouter');
 const bidsRouter = require('./Routes/bidsRouter');
+const publicProductRouter = require('./Routes/publicProductRouter');
+
 
 
 //init
@@ -20,7 +22,7 @@ app.disable('x-powered-by');
 
 //MiddleWare
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 // setup the logger
 app.use(morgan('common', { stream: accessLogStream }));
@@ -36,6 +38,9 @@ app.use('/api/bids', authorization);
 app.use('/api/Users', userRouter);
 app.use('/api/products/protected', productRouter);
 app.use('/api/bids',bidsRouter);
+
+app.use('/api/publicproducts', publicProductRouter);
+
 
 
 //Error handling

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {PaymentService} from "./payment.service";
-import {Module} from "stripe-angular";
-import {FormsModule} from "@angular/forms";
-import {PaymentComponent} from "./payment.component";
+import { PaymentService } from "./payment.service";
+import { Module } from "stripe-angular";
+import { FormsModule } from "@angular/forms";
+import { PaymentComponent } from "./payment.component";
 
 
 
@@ -14,6 +14,6 @@ import {PaymentComponent} from "./payment.component";
     Module,
     FormsModule
   ],
-  providers:[PaymentService]
+  providers: [PaymentService]
 })
 export class PaymentModule { }

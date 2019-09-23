@@ -62,7 +62,8 @@ export class AdminAddProductComponent implements OnInit {
             this.addForm.reset();
             this.addForm.pristine;
             this.addForm.untouched;
-            this.addForm.clearValidators;
+            this.addForm.clearValidators();
+
           }
           else {
             this.error = data['msg'];
@@ -75,4 +76,9 @@ export class AdminAddProductComponent implements OnInit {
 
   get f() { return this.addForm.controls; }
 
+  reset() {
+    this.addForm.reset();
+    console.log('reset');
+
+  }
 }

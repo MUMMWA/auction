@@ -41,13 +41,13 @@
 
                 <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
                 <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
-                <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
+
                 <span class="navbar-text" *ngIf="currentUser">
                     Hello, {{currentUser.firstName}}
                 </span>
 
-                <a href="#" class="icons-btn d-inline-block">
-                    <span class="icon-heart-o"></span>
+                <a href="#" class="icons-btn d-inline-block" (click)="logout()" *ngIf="currentUser">
+                    <span class="icon-sign-out"></span>
                 </a>
                 <a href="#" class="icons-btn d-inline-block bag">
                     <span class="icon-bell"></span>

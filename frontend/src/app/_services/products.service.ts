@@ -8,6 +8,7 @@ import { ProductModel } from '../_models/product.Model';
 export class ProductsService {
 
   productsUrl: string = 'http://localhost:8888/api/products/protected/';
+  publicProductsUrl: string = 'http://localhost:8888/api/publicproducts';
 
   constructor(private http: HttpClient) { }
 
@@ -36,6 +37,10 @@ export class ProductsService {
   }
   bid(bid) {
     return this.http.post('http://localhost:8888/api/bids', bid);
+  }
+
+  getAllPublicProducts() {
+    return this.http.get<ProductModel[]>(this.publicProductsUrl);
   }
 
 }
