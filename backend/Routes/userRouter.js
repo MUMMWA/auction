@@ -49,8 +49,14 @@ router.post('/findbyemail', async function (req, res, next) {
 router.post('/signin', async function (req, res, next) {
     let existUser = await User.find().findUserByEmailAndPassword(req.body.email, req.body.password);
     if (existUser && existUser.email != null) {
+        let payload = {
+            ...existUser,
+            id: existUser._id
+        };
+        //remove password for security
+        delete payload.password;
 
-        const token = await jwtHelper.sign({ id: existUser._id });
+        const token = await jwtHelper.sign(payload);
 
         res.json({
             success: 1, msg: 'User exist',

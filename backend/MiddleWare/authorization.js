@@ -12,6 +12,8 @@ function isAuthenticated(req, res, next) {
             // if the JWT is valid, allow them to hit
             // the intended endpoint
             //console.log(jwtHelper.decode(token))
+            res.user = jwtHelper.decode(token).payload._doc;
+            console.log("user:::",res.user);
             return next();
         }
         else {
