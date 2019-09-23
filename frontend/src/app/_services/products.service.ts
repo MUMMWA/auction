@@ -24,7 +24,6 @@ export class ProductsService {
   }
 
   addProduct(product: ProductModel) {
-    console.log(product);
     return this.http.post(this.productsUrl, product);
   }
 
