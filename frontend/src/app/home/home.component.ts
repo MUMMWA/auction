@@ -20,13 +20,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.currentUserSubscription = this.authenticationService.currentUser
       .subscribe(user => this.currentUser = user);
   }
-  products;
-  productsArray;
+  products = [];
+  productsArray = [];
   ngOnInit() {
     this.productsService.getAllPublicProducts()
       .subscribe(
         res => {
-          this.products = res.products;
+          this.products = res['products'];
           this.productsArray = this.products.map(product => {
             let p = {
               ...product,

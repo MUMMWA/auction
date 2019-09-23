@@ -10,8 +10,7 @@
                         <h1 class="mb-2">{{productsArray[3].name}}</h1>
                         <h4>{{productsArray[3].description | trim:100}}</h4>
                         <div class="price mt-3 mb-5">
-                            <strong>1,499</strong>
-                            <del>$1,999</del>
+                            <strong>Highest Bid: $95</strong>
                         </div>
                         <p>
                             <a class="btn btn-outline-primary rounded-0" (click)="goToProduct(productsArray[3])">PLACE BID</a>
@@ -20,7 +19,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 align-self-end text-center text-lg-right">
-                    <img src="{{productsArray[4].images[0].imageUrl}}" alt="Image" class="img-fluid img-1 banner-img">
+                    <img src="{{productsArray[3].images[0].imageUrl}}" alt="Image" class="img-fluid img-1 banner-img">
                 </div>
 
             </div>

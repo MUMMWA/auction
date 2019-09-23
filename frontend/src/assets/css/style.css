@@ -160,6 +160,8 @@ a {
 .site-navbar {
   margin-bottom: 0px; 
   width: 100%;
+  position: relative;
+  z-index: 1000;
   background: transparent !important; }
   .site-navbar.position-relative {
     position: relative;
@@ -1092,6 +1094,15 @@ a {
 .banner-img {
   margin-bottom: -170px;
 }
-.btn-danger {
+.btn-danger, .btn-primary {
   color: #fff !important;
+}
+
+.product-box {
+  padding: 100px 0;
+  text-align: center;
+  
+}
+.product-box .img-fluid {
+  max-width: 80% !important;
 }

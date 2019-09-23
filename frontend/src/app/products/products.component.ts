@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../_services/products.service';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 
 export class ProductsComponent implements OnInit {
 
-  constructor(private productsService: ProductsService,private route: Router) { }
+  constructor(private productsService: ProductsService, private route: Router) { }
 
   products = [];
   productsArray = [];
@@ -22,15 +22,15 @@ export class ProductsComponent implements OnInit {
         res => {
           this.products = res.products;
           this.productsArray = this.products.map(product => {
-              let p ={
-                ...product,
-                timer: (
-                  new Date(product.end_time).getTime() / 1000) - (new Date().getTime() / 1000)
-              };
+            let p = {
+              ...product,
+              timer: (
+                new Date(product.end_time).getTime() / 1000) - (new Date().getTime() / 1000)
+            };
             localStorage.setItem(p._id, JSON.stringify(p));
-              return p;
+            return p;
 
-            }
+          }
           );
           console.log(this.productsArray);
         },
@@ -39,8 +39,8 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  goToProduct(product){
-    this.route.navigate(['product',product._id]);
+  goToProduct(product) {
+    this.route.navigate(['product', product._id]);
   }
 
 }

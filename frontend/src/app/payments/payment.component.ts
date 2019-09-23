@@ -12,6 +12,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-payment-c',
   template: `
+    <div class="container"> 
     <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout mt-100">
       <div class="form-row">
         <label for="card-info">Card Info</label>
@@ -22,6 +23,7 @@ import { NgForm } from '@angular/forms';
 
       <button type="submit">Pay $777</button>
     </form>
+    </div>
   `,
   styleUrls: ['./payment.css'],
   encapsulation: ViewEncapsulation.ShadowDom

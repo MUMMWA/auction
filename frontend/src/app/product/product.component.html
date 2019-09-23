@@ -1,26 +1,129 @@
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{product.name}}</mat-card-title>
-    <mat-card-subtitle>
-       <countdown [config]="{leftTime: product.timer}"></countdown>
-    </mat-card-subtitle>
-  </mat-card-header>
-  <div class="card-image">
-    <img mat-card-image src="{{product.images[0].imageUrl}}" alt="{{product.name}}" width="60px">
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0">
+        <a href="index.html">Home</a>
+        /
+        <strong class="text-black">{{product.name}}</strong>
+      </div>
+    </div>
   </div>
-  <mat-card-content>
-    <p>
-      {{product.description}}
-    </p>
-  </mat-card-content>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="$" type="number">
-    </mat-form-field>
+</div>
 
-    <mat-card-actions class="example-full-width">
-      <button mat-button (click)="goToPayment()" >Increase Bid</button>
-    </mat-card-actions>
-  </form>
-</mat-card>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="border product-box ">
+          <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-black">{{product.name}}</h2>
+        <countdown [config]="{leftTime: product.timer}"></countdown>
+        <p>{{product.description}}</p>
+
+        <strong class="text-primary h4">$50.00</strong>
+
+
+
+        <p>
+          <a class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary mt-15" (click)="goToPayment()">Icrease the bid</a>
+
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section text-center col-12">
+        <h2 class="text-uppercase">More Products</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 block-3 products-wrap">
+        <div class="nonloop-block-3 owl-carousel">
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <img src="./assets/images/product_1.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>The Shoe</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <span class="tag">Sale</span>
+              <img src="./assets/images/product_2.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>Marc Jacobs Bag</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50
+                  <del>$30.00</del>
+                </strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <img src="./assets/images/product_3.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>The Belt</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <img src="./assets/images/product_1.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>The Shoe</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <span class="tag">Sale</span>
+              <img src="./assets/images/product_2.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>Marc Jacobs Bag</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50
+                  <del>$30.00</del>
+                </strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="product">
+            <a href="shop-single.html" class="item">
+              <img src="./assets/images/product_3.jpg" alt="Image" class="img-fluid">
+              <div class="item-info">
+                <h3>The Belt</h3>
+                <span class="collection d-block">Summer Collection</span>
+                <strong class="price">$9.50</strong>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
