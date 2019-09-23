@@ -4,7 +4,7 @@
 
             <div class="col-6 col-md-6 col-lg-4" *ngFor="let product of productsArray">
                 <a class="item">
-                    <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid">
+                    <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid product-image">
                     <div class="item-info">
                         <h3>{{product.name}}</h3>
                         <span class="collection d-block">{{product.description | trim:20 }}</span>

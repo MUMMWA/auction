@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   AfterViewInit,
   OnDestroy,
@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-payment-c',
   template: `
-    <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout">
+    <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout mt-100">
       <div class="form-row">
         <label for="card-info">Card Info</label>
         <div id="card-info" #cardInfo></div>
@@ -23,16 +23,17 @@ import { NgForm } from '@angular/forms';
       <button type="submit">Pay $777</button>
     </form>
   `,
-  styleUrls: ['./payment.css']
+  styleUrls: ['./payment.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PaymentComponent implements AfterViewInit, OnDestroy {
-  @ViewChild("cardInfo",{static:true}) cardInfo: ElementRef;
+  @ViewChild("cardInfo", { static: true }) cardInfo: ElementRef;
 
   card: any;
   cardHandler = this.onChange.bind(this);
   error: string;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngAfterViewInit() {
     this.card = elements.create('card');
