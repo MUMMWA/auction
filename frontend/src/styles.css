@@ -24,6 +24,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-top: 15px;
     display: block;
 }
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+
+}
 .mat-grid-tile .mat-figure {
     margin: 30px !important;
 }

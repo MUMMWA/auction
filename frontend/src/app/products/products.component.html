@@ -1,27 +1,23 @@
-<div class="container">
-    <mat-grid-list cols="3" rowHeight="590px">
-        <mat-grid-tile *ngFor="let product of productsArray">
-            <mat-card class="example-card">
-                <mat-card-header>
-                    <mat-card-title>{{product.name}}</mat-card-title>
-                    <mat-card-subtitle>
+<div class="products-wrap mt-100 border-top-0">
+    <div class="container-fluid">
+        <div class="row no-gutters products">
+
+            <div class="col-6 col-md-6 col-lg-4" *ngFor="let product of productsArray">
+                <a href="#" class="item">
+                    <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid">
+                    <div class="item-info">
+                        <h3>{{product.name}}</h3>
+                        <span class="collection d-block">{{product.description | trim:20 }}</span>
+                        <strong class="price">$9.50</strong>
+                        <br>
                         <countdown [config]="{leftTime: product.timer}"></countdown>
-                    </mat-card-subtitle>
-                </mat-card-header>
-                <div class="card-image">
-                    <img mat-card-image src="{{product.images[0].imageUrl}}" alt="{{product.name}}" width="60px">
-                </div>
-                <mat-card-content>
-                    <p>
-                        {{product.description | trim:100 }}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="goToProduct(product)" >PLACE BID</button>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
-                </mat-card-actions>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+                        <br>
+                        <button mat-button (click)="goToProduct(product)">PLACE BID</button>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
 </div>
