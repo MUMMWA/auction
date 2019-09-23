@@ -2,9 +2,17 @@
     <mat-toolbar-row>
         <span routerLink="/">Auction</span>
         <span routerLink="/products">Products</span>
-        <span [routerLink]="['/productmgmt']" *ngIf="currentUser && currentUser.role==='admin'">Products Managment</span>
+
+        <button mat-button [matMenuTriggerFor]="menu" *ngIf="currentUser && currentUser.role==='admin'">Products
+            Managment</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['productmgmt','add']">Add Products</button>
+            <button mat-menu-item [routerLink]="['productmgmt','list']">List Products</button>
+        </mat-menu>
+
         <span class="example-spacer"></span>
-        <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
+        <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser"
+            routerLink>Login</button>
         <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
         <button mat-stroked-button class="example-icon" (click)="logout()" *ngIf="currentUser">Logout</button>
         <span class="navbar-text" *ngIf="currentUser">

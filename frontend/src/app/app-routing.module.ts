@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }, //, canActivate: [ProtectedGuard]
-  { path: 'productmgmt', component: AdminAddProductComponent, canActivate: [ProtectedGuard] }, //, canActivate: [ProtectedGuard]
+  { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] }, //, canActivate: [ProtectedGuard]
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent },
   { path: '**', redirectTo: '' }
