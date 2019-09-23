@@ -9,6 +9,7 @@ const cors = require('cors');
 const authorization = require('./MiddleWare/authorization');
 const userRouter = require('./Routes/userRouter');
 const productRouter=require('./Routes/productRouter');
+const paymentRouter = require('./Routes/paymentRouter');
 
 
 //init
@@ -28,11 +29,13 @@ app.use(cors());
 //custom middleware
 app.use('/api/Users/protected', authorization);
 app.use('/api/products/protected', authorization);
+app.use('/api/payment', authorization);
 
 
 //Routing
 app.use('/api/Users', userRouter);
 app.use('/api/products/protected', productRouter);
+app.use('/api/payment',paymentRouter);
 
 
 //Error handling
