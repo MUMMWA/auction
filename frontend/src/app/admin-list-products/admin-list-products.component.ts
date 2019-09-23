@@ -74,7 +74,7 @@ export class AdminListProductsComponent implements OnInit {
       });
 
     dialogRef.afterClosed().subscribe(dialogResult => {
-      if (dialogResult == 'true') {
+      if (dialogResult) {
         this.deleteProduct(product);
       }
     });
