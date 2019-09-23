@@ -17,13 +17,13 @@ export class AdminListProductsComponent implements OnInit {
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
-  
+
   products: MatTableDataSource<ProductModel>;
-  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description','actions'];
+  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description', 'actions'];
 
-  constructor(private productService: ProductsService, private router: Router) {
+  constructor(private productService: ProductsService, private router: Router, public dialog: MatDialog) {
 
-   }
+  }
 
   ngOnInit() {
     this.getAllProducts();
@@ -50,10 +50,8 @@ export class AdminListProductsComponent implements OnInit {
     this.router.navigate(['add-product']);
   }
 
-  deleteProduct(product: ProductModel) {
-
+  private deleteProduct(product: ProductModel) {
     this.productService.deleteProduct(product._id).subscribe(data => {
-      //console.log(data);
       this.getAllProducts();
     });
   }
@@ -64,4 +62,21 @@ export class AdminListProductsComponent implements OnInit {
     this.router.navigate(['edit-product']);
   }
 
+  confirmDialog(product: ProductModel): void {
+    const message = `Are you sure you want to delete this product?`;
+
+    const dialogData = new ConfirmDialogModel("Confirm Delete", message);
+
+    const dialogRef = this.dialog.open(ConfirmDialogeComponent,
+      {
+        maxWidth: "400px",
+        data: dialogData
+      });
+
+    dialogRef.afterClosed().subscribe(dialogResult => {
+      if (dialogResult) {
+        this.deleteProduct(product);
+      }
+    });
+  }
 }
