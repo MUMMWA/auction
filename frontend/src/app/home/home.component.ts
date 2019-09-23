@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         },
         error => console.log(error)
       )
-
   }
 
   ngOnDestroy(): void {
@@ -52,5 +51,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
+  }
+
+  goToProduct(product) {
+    this.router.navigate(['product', product._id]);
   }
 }
