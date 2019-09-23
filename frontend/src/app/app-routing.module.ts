@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'payment/:id', component: PaymentComponent },
   { path: '**', redirectTo: '' }
 ];
 

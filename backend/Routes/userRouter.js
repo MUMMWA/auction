@@ -58,10 +58,11 @@ router.post('/signin', async function (req, res, next) {
         };
 
         const token = await jwtHelper.sign(payload);
+        console.log("payload: ",payload);
 
         res.json({
             success: 1, msg: 'User exist',
-            user: { id: existUser._id, email: existUser.email, firstName: existUser.firstName, lastName: existUser.lastName, role: existUser.role, token: token }
+            user: { id: existUser._id, email: existUser.email, firstName: existUser.firstName, lastName: existUser.lastName, role: existUser.role, token: token,bids: existUser.bids }
         });
     }
     else {

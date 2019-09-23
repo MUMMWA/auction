@@ -1,9 +1,9 @@
 const express = require('express');
-const productController = require('../Controllers/payment.controller');
+const bidsController = require('../Controllers/bids.controller');
 const router = express.Router();
 
 // Create a new Product
-router.post('/', productController.pay);
+router.post('/', bidsController.bid);
 
 
 module.exports = router;

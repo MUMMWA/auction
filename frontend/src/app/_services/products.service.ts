@@ -34,5 +34,8 @@ export class ProductsService {
   updateProduct(product: ProductModel) {
     return this.http.put(this.productsUrl + product._id, product);
   }
+  bid(bid) {
+    return this.http.post('http://localhost:8888/api/bids', bid);
+  }
 
 }
