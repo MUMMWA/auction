@@ -6,13 +6,15 @@ import { RegisterComponent } from './register/register.component';
 import { ProtectedGuard } from './_guards/protected.guard';
 import { ProductsComponent } from './products/products.component';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }, //, canActivate: [ProtectedGuard]
-  { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] }, //, canActivate: [ProtectedGuard]
+  { path: 'register', component: RegisterComponent }, 
+  { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] },
+  { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent },
   { path: '**', redirectTo: '' }

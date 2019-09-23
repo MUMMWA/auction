@@ -23,6 +23,7 @@ import { ProductsService } from './_services/products.service';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { TrimPipe } from './_pipes/trim.pipe';
+import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TrimPipe } from './_pipes/trim.pipe';
     RegisterComponent,
     ProductsComponent,
     AdminAddProductComponent,
-    TrimPipe
+    TrimPipe,
+    AdminListProductsComponent
 
   ],
   imports: [
