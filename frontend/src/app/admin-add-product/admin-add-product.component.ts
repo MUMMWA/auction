@@ -76,4 +76,9 @@ export class AdminAddProductComponent implements OnInit {
 
   get f() { return this.addForm.controls; }
 
+  reset() {
+    this.addForm.reset();
+    console.log('reset');
+
+  }
 }

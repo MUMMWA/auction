@@ -1,8 +1,9 @@
 // Bring Mongoose into the app
 var mongoose = require('mongoose');
+var credential = require('../config/credentials.json');
 
 // Build the connection string
-var dbURI = 'mongodb+srv://kero:kero@auctiontest-ul455.mongodb.net/auction?retryWrites=true&w=majority';
+var dbURI = `mongodb+srv://${credential.db.userName}:${credential.db.password}@auctiontest-ul455.mongodb.net/auction?retryWrites=true&w=majority`;
 
 // Create the database connection
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
