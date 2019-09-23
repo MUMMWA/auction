@@ -34,10 +34,10 @@
 
                     <ng-container matColumnDef="actions">
                         <th mat-header-cell *matHeaderCellDef> </th>
-                        <mat-cell *matCellDef="let element">
-                            <button mat-raised-button color="primary" mat-button >Edit</button> 
-                            <button mat-raised-button color="primary" mat-button (click)="deleteProduct(element)" >Delete</button>
-                        </mat-cell>
+                        <td mat-cell *matCellDef="let element">
+                            <button class="mr-15" mat-raised-button color="primary" mat-button>Edit</button>
+                            <button mat-raised-button color="primary" mat-button (click)="deleteProduct(element)">Delete</button>
+                        </td>
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
