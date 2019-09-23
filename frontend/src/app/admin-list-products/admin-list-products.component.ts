@@ -17,7 +17,7 @@ export class AdminListProductsComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   
   products: MatTableDataSource<ProductModel>;
-  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description'];
+  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description','actions'];
 
   constructor(private productService: ProductsService, private router: Router) {
 

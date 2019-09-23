@@ -32,6 +32,14 @@
                         <td mat-cell *matCellDef="let element"> {{element.description| trim :50}} </td>
                     </ng-container>
 
+                    <!-- <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <mat-cell *matCellDef="let element">
+                            <button mat-raised-button color="primary" mat-button >Edit</button> 
+                            <button mat-raised-button color="primary" mat-button (click)="deleteProduct(element)" >Delete</button>
+                        </mat-cell>
+                    </ng-container> -->
+
                     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
