@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-100">
     <div class="alert alert-danger" *ngIf="error">
         <strong>Error!</strong> {{error}}
     </div>
@@ -14,23 +14,20 @@
 
             <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
                 <mat-form-field class="full-width-input">
-                    <input matInput formControlName="name" placeholder="Product Name"
-                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                    <input matInput formControlName="name" placeholder="Product Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
                     <mat-error *ngIf="submitted && f.name.errors && f.name.errors.required">
                         Product name is required
                     </mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="full-width-input">
-                    <textarea matInput formControlName="description" placeholder="Product Description"
-                        [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+                    <textarea matInput formControlName="description" placeholder="Product Description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
                     <mat-error *ngIf="submitted && f.description.errors && f.description.errors.required">
                         Product description is required
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field class="full-width-input">
-                    <input matInput [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" formControlName="start_time"
-                        placeholder="Auction Start Datetime"
+                    <input matInput [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" formControlName="start_time" placeholder="Auction Start Datetime"
                         [ngClass]="{ 'is-invalid': submitted && f.start_time.errors }">
                     <owl-date-time #dt1></owl-date-time>
                     <mat-error *ngIf="submitted && f.start_time.errors && f.start_time.errors.required">
@@ -39,26 +36,24 @@
                 </mat-form-field>
 
                 <mat-form-field class="full-width-input">
-                    <input matInput [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" formControlName="end_time"
-                        placeholder="Auction End Datetime" [ngClass]="{ 'is-invalid': submitted && f.end_time.errors }">
+                    <input matInput [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" formControlName="end_time" placeholder="Auction End Datetime"
+                        [ngClass]="{ 'is-invalid': submitted && f.end_time.errors }">
                     <owl-date-time #dt2></owl-date-time>
                     <mat-error *ngIf="submitted && f.end_time.errors && f.end_time.errors.required">
                         Aution end datetime is required
                     </mat-error>
                 </mat-form-field>
 
-                <button type="button" (click)="onAddImage()" class="btn btn-default">Add new Image</button><br>
+                <button type="button" (click)="onAddImage()" class="btn btn-default">Add new Image</button>
+                <br>
                 <mat-nav-list formArrayName="images">
                     <mat-list-item *ngFor="let itemrow of f.images.controls; let i=index" [formGroupName]="i">
 
-                        <input matInput type="text" placeholder="Image URL" formControlName="imageUrl"
-                            [ngClass]="{ 'is-invalid': submitted && f.images.controls[i].errors }">
-                        <mat-error
-                            *ngIf="submitted && f.images.controls[i].errors && f.images.controls[i].errors.required">
+                        <input matInput type="text" placeholder="Image URL" formControlName="imageUrl" [ngClass]="{ 'is-invalid': submitted && f.images.controls[i].errors }">
+                        <mat-error *ngIf="submitted && f.images.controls[i].errors && f.images.controls[i].errors.required">
                             Image URL is required
                         </mat-error>
-                        <input type="button" *ngIf="f.images.controls.length > 1" (click)="onDeleteImage(i)"
-                            class="btn btn-danger" value="Delete Image">
+                        <input type="button" *ngIf="f.images.controls.length > 1" (click)="onDeleteImage(i)" class="btn btn-danger" value="Delete Image">
                     </mat-list-item>
                 </mat-nav-list>
 
