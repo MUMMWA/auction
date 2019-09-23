@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -7,15 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() product = {
-    name:"TV",
-    description:"a tv",
-    timer:null,
-    images:[]
-  };
-  constructor() { }
+   product :any = {};
+  constructor(private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.product = JSON.parse(localStorage.getItem(params['id']));
+      console.log("product",this.product);
+    });
+  }
+
+  goToPayment(){
+   this.router.navigate(['payment']);
   }
 
 }

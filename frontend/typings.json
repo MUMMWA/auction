@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "angular": "registry:dt/angular#1.6.0+20170321201455"
-  }
+  },
+  "typeRoots": [ "node_modules/@types", "../src/typings.d.ts" ]
 }

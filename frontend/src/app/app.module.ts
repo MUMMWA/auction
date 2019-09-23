@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Module as StripeModule } from "stripe-angular"
 
 // Third party
 import { CountdownModule } from 'ngx-countdown';
@@ -23,6 +24,10 @@ import { ProductsService } from './_services/products.service';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { TrimPipe } from './_pipes/trim.pipe';
+import {ProductComponent} from "./product/product.component";
+import {ProductModule} from "./product/product.module";
+import {Stripe} from "stripe-angular";
+import {PaymentModule} from "./payments/payment.module";
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { TrimPipe } from './_pipes/trim.pipe';
     BrowserAnimationsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    CountdownModule
+    CountdownModule,
+    ProductModule,
+    StripeModule.forRoot(),
+    PaymentModule,
+    FormsModule
+
 
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService, ProductsService],
