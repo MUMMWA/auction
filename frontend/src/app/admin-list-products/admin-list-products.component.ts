@@ -13,13 +13,15 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AdminListProductsComponent implements OnInit {
 
-  products: MatTableDataSource<ProductModel>;
-
-  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description'];
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
+  
+  products: MatTableDataSource<ProductModel>;
+  displayedColumns: string[] = ['name', 'start_time', 'end_time', 'description'];
 
-  constructor(private productService: ProductsService, private router: Router) { }
+  constructor(private productService: ProductsService, private router: Router) {
+
+   }
 
   ngOnInit() {
     this.getAllProducts();
@@ -27,7 +29,9 @@ export class AdminListProductsComponent implements OnInit {
 
   getAllProducts(): void {
     this.productService.getAllProducts().subscribe(data => {
-      this.products = data['products'];
+      this.products = new MatTableDataSource(data['products']);
+      this.products.sort = this.sort;
+      this.products.paginator = this.paginator;
     });
   };
 
