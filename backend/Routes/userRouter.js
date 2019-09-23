@@ -50,11 +50,12 @@ router.post('/signin', async function (req, res, next) {
     let existUser = await User.find().findUserByEmailAndPassword(req.body.email, req.body.password);
     if (existUser && existUser.email != null) {
         let payload = {
-            ...existUser,
-            id: existUser._id
+            id: existUser._id,
+            firstName: existUser.firstName,
+            lastName: existUser.lastName,
+            email: existUser.email,
+            role: existUser.role
         };
-        //remove password for security
-        delete payload.password;
 
         const token = await jwtHelper.sign(payload);
 

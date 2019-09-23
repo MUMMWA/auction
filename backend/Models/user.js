@@ -12,7 +12,27 @@ var userSchema = mongoose.Schema({
     password: String,
     role:String,
     createdAt: Date,
-    updatedAt: Date
+    updatedAt: Date,
+    bids:[{
+        amount:Number,
+        time:Date,
+        product:{
+            product_id:String,
+            name:String,
+            description:String
+        }
+    }],
+    winnings: [
+        {
+            amount:Number,
+            time:Date,
+            product:{
+                product_id:String,
+                name:String,
+                description:String
+            }
+        }
+    ]
 });
 
 userSchema.pre('save', function (next) {
@@ -25,11 +45,11 @@ userSchema.pre('save', function (next) {
         this.createdAt = currentDate;
     }
     next();
-})
+});
 
 userSchema.query.findUserByEmail = function (email) {
     return this.findOne({ email: email });
-}
+};
 userSchema.query.findUserByEmailAndPassword = async function (email, password) {
     let user = await this.findOne({ email: email });
     if (user) {
@@ -40,5 +60,5 @@ userSchema.query.findUserByEmailAndPassword = async function (email, password) {
     }
 
     return null;
-}
+};
 module.exports = mongoose.model('User', userSchema);

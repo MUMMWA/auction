@@ -33,7 +33,6 @@ var verifyOptions = {
 verify = function (token) {
     try {
         let vjwt = jwt.verify(token, publicKEY, verifyOptions);
-        console.log("vjwt vjwt ",decode(token));
 
         return true
     }
