@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
     this.productsService.getProducts()
       .subscribe(
         res => {
-          this.products = res.products
+          this.products = res.products;
           this.productsArray = this.products.map(product =>
             ({
               ...product,
