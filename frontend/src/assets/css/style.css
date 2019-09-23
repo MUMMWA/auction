@@ -1089,3 +1089,9 @@ a {
     max-height: 180px;
     margin-top: 30px;
 }
+.banner-img {
+  margin-bottom: -170px;
+}
+.btn-danger {
+  color: #fff !important;
+}
