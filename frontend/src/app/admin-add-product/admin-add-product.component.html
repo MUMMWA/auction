@@ -59,6 +59,7 @@
 
                 <!--  -->
                 <button mat-button class="mt-15" mat-raised-button color="primary" [disabled]="loading">Save</button>
+                <input type="reset" mat-button class="mt-15" mat-raised-button color="primary" [disabled]="loading"  value="Reset">
                 <img *ngIf="loading" src="../../assets/img/loading.gif" />
             </form>
         </mat-card-content>
