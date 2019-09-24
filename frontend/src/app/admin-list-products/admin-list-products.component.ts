@@ -47,7 +47,7 @@ export class AdminListProductsComponent implements OnInit {
 
 
   addProduct(): void {
-    this.router.navigate(['add-product']);
+    this.router.navigate(['productmgmt', 'add']);
   }
 
   private deleteProduct(product: ProductModel) {
@@ -59,7 +59,7 @@ export class AdminListProductsComponent implements OnInit {
   updateProduct(product: ProductModel) {
     localStorage.removeItem("productId");
     localStorage.setItem("productId", product._id);
-    this.router.navigate(['edit-product']);
+    this.router.navigate(['productmgmt', 'edit']);
   }
 
   confirmDialog(product: ProductModel): void {

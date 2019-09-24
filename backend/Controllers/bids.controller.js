@@ -25,7 +25,8 @@ module.exports.bid = async (req, res) => {
             product: {
                 product_id: req.body.productId,
                 name: product.name,
-                description: product.description
+                description: product.description,
+                images:product.images
             }
         };
 
@@ -151,7 +152,8 @@ module.exports.sell = async (product) => {
               product: {
                   product_id: product._id,
                   name: product.name,
-                  description: product.description
+                  description: product.description,
+                  images: product.images
               }
           };
 

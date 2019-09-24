@@ -38,9 +38,11 @@ app.use(function (req,res,next) {
     return next();
 });
 //custom middleware
+//app.use('/',express.static(__dirname+'/public/lab14/index.html'));
 app.use('/api/Users/protected', authorization);
 app.use('/api/products/protected', authorization);
 app.use('/api/bids', authorization);
+
 
 
 
@@ -50,6 +52,10 @@ app.use('/api/products/protected', productRouter);
 app.use('/api/bids',bidsRouter);
 
 app.use('/api/publicproducts', publicProductRouter);
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/lab14/'));
+});
+
 
 
 

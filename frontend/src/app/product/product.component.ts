@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
    product :any = {};
    productId;
    lastBid: number = 0;
+
   constructor(private route: ActivatedRoute,private router: Router, private productsService: ProductsService) { }
 
   ngOnInit() {
@@ -22,7 +23,7 @@ export class ProductComponent implements OnInit {
       this.productsService.getLastBid(this.productId)
         .subscribe((res:any) => {
               console.log("last bid:::",res);
-              this.lastBid =res.bid.amount;
+              this.lastBid = res.bid.amount;
 
               },
           error => console.log("last bid error ",error)
@@ -33,7 +34,7 @@ export class ProductComponent implements OnInit {
   }
 
   goToPayment(){
-   this.router.navigate(['payment',this.productId, this.bid.nativeElement.value]);
+   this.router.navigate(['payment',this.productId, this.bid.nativeElement.value, this.lastBid]);
   }
 
 }

@@ -74,7 +74,7 @@ export class AdminAddProductComponent implements OnInit {
     }
   }
 
-  get f() { return this.addForm.controls; }
+  get f():any { return this.addForm.controls; }
 
   reset() {
     //this.router.navigate(['productmgmt', 'add']);
