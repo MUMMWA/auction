@@ -43,11 +43,10 @@ userSchema.pre('save', function (next) {
     this.updatedAt = currentDate;
     if (!this.createdAt) {
         this.createdAt = currentDate;
-    }
-    if (!this.password) {
         const passwordHash = cryptr.encrypt(this.password);
         this.password = passwordHash;
     }
+   
     next();
 });
 
