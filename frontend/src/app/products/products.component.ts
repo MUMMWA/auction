@@ -21,6 +21,7 @@ export class ProductsComponent implements OnInit {
       .subscribe(
         res => {
           this.products = res.products;
+
           this.productsArray = this.products.map(product => {
             let p = {
               ...product,
@@ -30,8 +31,10 @@ export class ProductsComponent implements OnInit {
             localStorage.setItem(p._id, JSON.stringify(p));
             return p;
 
-          }
-          );
+          });
+          // this.products = addTimer(product) {
+
+          // }
           console.log(this.productsArray);
         },
         error => console.log(error)
@@ -41,6 +44,10 @@ export class ProductsComponent implements OnInit {
 
   goToProduct(product) {
     this.route.navigate(['product', product._id]);
+  }
+
+  handleEvent(e) {
+    console.log(e);
   }
 
 }
