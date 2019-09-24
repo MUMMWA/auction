@@ -30,6 +30,7 @@ import { AdminListProductsComponent } from './admin-list-products/admin-list-pro
 import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.component';
 import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 import { WinningsComponent } from './winnings/winnings.component';
+import { AdminSoldproductListComponent } from './admin-soldproduct-list/admin-soldproduct-list.component';
 import { AboutComponent } from './about/about.component';
 
 
@@ -46,6 +47,7 @@ import { AboutComponent } from './about/about.component';
     ConfirmDialogeComponent,
     AdminEditProductComponent,
     WinningsComponent,
+    AdminSoldproductListComponent,
     AboutComponent
 
   ],
