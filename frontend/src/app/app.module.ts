@@ -31,6 +31,7 @@ import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.compo
 import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 import { WinningsComponent } from './winnings/winnings.component';
 import { AdminSoldproductListComponent } from './admin-soldproduct-list/admin-soldproduct-list.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { AdminSoldproductListComponent } from './admin-soldproduct-list/admin-so
     ConfirmDialogeComponent,
     AdminEditProductComponent,
     WinningsComponent,
-    AdminSoldproductListComponent
+    AdminSoldproductListComponent,
+    AboutComponent
 
   ],
   imports: [
