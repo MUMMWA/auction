@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material';
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 @NgModule({
     exports: [
@@ -27,7 +28,8 @@ import { MatDialogModule } from '@angular/material';
         MatMenuModule,
         MatSortModule,
         MatPaginatorModule,
-        MatDialogModule
+        MatDialogModule,
+        RxReactiveFormsModule
     ]
 })
 export class AngularMaterialModule { }

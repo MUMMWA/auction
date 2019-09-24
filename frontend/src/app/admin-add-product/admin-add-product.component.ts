@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../_services/products.service';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProductModel } from '../_models/product.Model';
-import { KeyValuePipe } from '@angular/common';
+import { RxFormBuilder, FormGroupExtension, RxwebValidators } from '@rxweb/reactive-form-validators';
 
 @Component({
   selector: 'app-admin-add-product',
@@ -98,7 +97,7 @@ export class AdminAddProductComponent implements OnInit {
     //     images: this.formBuilder.array([this.initItemRows()])
     //   });
     // }, 0);
-
+   // (<FormGroupExtension>this.addForm).resetForm()
 
 
   }
