@@ -19,17 +19,20 @@
 </div>
 
 <div class="container-fluid " *ngIf="winnings != undefined  && winnings.length > 0">
+    <div class="row">
+        <div class="title-section text-center col-12 mt-50">
+            <h2 class="text-uppercase">My Winnings BIDS</h2>
+        </div>
+    </div>
     <div class="row no-gutters products ">
         <div class="col-6 col-md-6 col-lg-4 " *ngFor="let item of winnings ">
             <a class="item ">
-                <!-- <img src="{{product.images[0].imageUrl}} " alt="Image " class="img-fluid product-image "> -->
+                <img src="{{item.product.images[0].imageUrl}} " alt="Image " class="img-fluid product-image ">
                 <div class="item-info ">
                     <h3>{{item.product.name}}</h3>
                     <span class="collection d-block ">{{item.product.description | trim:20 }}</span>
                     <strong class="price ">Won : {{item.amount | currency}}</strong>
-                    <div class="mt-15 ">
-                        <button class="btn btn-outline-primary rounded-0 " (click)="goToProduct(product) ">PLACE BID</button>
-                    </div>
+
                 </div>
             </a>
         </div>
