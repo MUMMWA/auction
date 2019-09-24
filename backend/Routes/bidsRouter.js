@@ -5,5 +5,8 @@ const router = express.Router();
 // Create a new Product
 router.post('/', bidsController.bid);
 
+router.get('', bidsController.getBids);
+router.get('/winning', bidsController.getWinnings);
+
 
 module.exports = router;

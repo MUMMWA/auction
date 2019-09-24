@@ -23,12 +23,12 @@ import {ActivatedRoute} from "@angular/router";
         <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
       </div>
 
-      <button type="submit">Pay $777</button>
+      <button type="submit">Pay $ {{amount}}</button>
     </form>
     </div>
   `,
   styleUrls: ['./payment.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   @ViewChild("cardInfo", { static: true }) cardInfo: ElementRef;
@@ -37,6 +37,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   card: any;
   cardHandler = this.onChange.bind(this);
   error: string;
+  amount: number;
 
   constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService) { }
 
@@ -62,33 +63,33 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   }
 
   async onSubmit(form: NgForm) {
+    this.productService.bid({
+      productId: this.productId,
+      amount: 777
+    }).subscribe(data => {
+      if (data['success'] === 1) {
+        console.log("bid data ", data);
+        // this.message = data['msg'];
+        // this.addForm.reset();
+        // this.addForm.pristine;
+        // this.addForm.untouched;
+        // this.addForm.clearValidators;
+      } else {
+        console.log("bid error",data);
+        this.error = data['msg'];
+      }
+      // this.loading = false;
+
+    });
     const { token, error } = await stripe.createToken(this.card);
 
     if (error) {
       console.log('Something is wrong:', error);
-      this.productService.bid({
-        productId: this.productId,
-        amount: 777
-      }).subscribe(data => {
-        if (data['success'] === 1) {
-          console.log("bid data ", data);
-          // this.message = data['msg'];
-          // this.addForm.reset();
-          // this.addForm.pristine;
-          // this.addForm.untouched;
-          // this.addForm.clearValidators;
-        } else {
-          console.log("bid error",data);
-          this.error = data['msg'];
-        }
-        // this.loading = false;
-
-      });
     } else {
       console.log('Success!', token);
        this.productService.bid({
          productId: this.productId,
-         amount: 777
+         amount: this.amount
        }).subscribe(data => {
           if (data['success'] === 1) {
             console.log("bid data ", data);
@@ -111,6 +112,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.productId = params['id'];
+      this.amount = params['amount'];
 //      this.product = JSON.parse(localStorage.getItem(params['id']));
     });
 

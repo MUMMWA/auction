@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ProductComponent implements OnInit {
 
+  @ViewChild('bid',{static:true}) bid;
    product :any = {};
    productId;
   constructor(private route: ActivatedRoute,private router: Router) { }
@@ -21,7 +22,7 @@ export class ProductComponent implements OnInit {
   }
 
   goToPayment(){
-   this.router.navigate(['payment',this.productId]);
+   this.router.navigate(['payment',this.productId, this.bid.nativeElement.value]);
   }
 
 }

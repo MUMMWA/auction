@@ -18,9 +18,9 @@ const routes: Routes = [
   { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
-  { path: 'products', component: ProductsComponent },
-  { path: 'product/:id', component: ProductComponent },
-  { path: 'payment/:id', component: PaymentComponent },
+  { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },
+  { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
+  { path: 'payment/:id/:amount', component: PaymentComponent, canActivate: [ProtectedGuard] },
   { path: '**', redirectTo: '' }
 ];
 
