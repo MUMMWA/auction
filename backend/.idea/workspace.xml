@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DB/dbNotification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/soldProducts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/cron.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/bids.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/bids.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/product.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/product.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/bidsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/bidsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/cron.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/cron.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+            <state relative-caret-position="1500">
+              <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
               <folding>
                 <element signature="e#142#2211#0" />
               </folding>
@@ -52,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Routes/bidsRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -106,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/cron.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -138,6 +125,7 @@
       <find>res</find>
       <find>console.</find>
       <find>highest</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,9 +147,9 @@
         <option value="$PROJECT_DIR$/Models/SoldProducts.js" />
         <option value="$PROJECT_DIR$/Models/soldProducts.js" />
         <option value="$PROJECT_DIR$/Controllers/product.controller.js" />
-        <option value="$PROJECT_DIR$/helpers/cron.js" />
         <option value="$PROJECT_DIR$/Routes/bidsRouter.js" />
         <option value="$PROJECT_DIR$/Controllers/bids.controller.js" />
+        <option value="$PROJECT_DIR$/helpers/cron.js" />
       </list>
     </option>
   </component>
@@ -259,12 +247,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
-      <workItem from="1569264699621" duration="29264000" />
+      <workItem from="1569264699621" duration="29330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29264000" />
+    <option name="totallyTimeSpent" value="29330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -371,13 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/cron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/product.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1165">
@@ -406,20 +387,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Routes/bidsRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+        <state relative-caret-position="1500">
+          <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
           <folding>
             <element signature="e#142#2211#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Routes/bidsRouter.js">
+    <entry file="file://$PROJECT_DIR$/helpers/cron.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -140,11 +140,10 @@ module.exports.sell = async (product) => {
     // Request validation
     try {
 
-        console.log("there was" ,product);
+
 
       if(product.highest_bid ) {
           let user = await User.findById(product.highest_bid.user.user_id);
-          console.log("user found", user);
 
           let sold = {
               amount: product.highest_bid.amount,
@@ -163,7 +162,6 @@ module.exports.sell = async (product) => {
           }
 
           user.save();
-          console.log("product before sole", product);
           const soldProduct = new SoldProduct({
               name: product.name,
               description: product.description,
@@ -173,7 +171,6 @@ module.exports.sell = async (product) => {
               bids: product.bids,
               highest_bid: product.highest_bid
           });
-          console.log("product after ", soldProduct);
           // Save Product in the database
           soldProduct.save();
 

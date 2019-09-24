@@ -10,14 +10,9 @@ module.exports = {
                 .then(products => {
                     let date = new Date();
                     for (let p of products) {
-                        console.log("================== ");
-                        console.log("date ", date);
-                        console.log("end time ", p.end_time);
-                        console.log("difference ", date - p.end_time);
                         if( date - p.end_time > 0){
                             bidsController.sell(p);
                         }
-
                     }
                 }).catch(err => {
                 console.log("error in cron job", err);
