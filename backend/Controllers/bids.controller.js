@@ -149,12 +149,12 @@ module.exports.sell = async (product) => {
               amount: product.highest_bid.amount,
               time: product.highest_bid.time,
               product: {
-                  user_id: product.highest_bid.user.user_id,
-                  firstName: user.firstName,
-                  lastName: user.lastName,
-                  email: user.email
+                  product_id: product._id,
+                  name: product.name,
+                  description: product.description
               }
           };
+
           if (user.winnings === undefined || user.winnings == null) {
               user.winnings = [sold];
           } else {
