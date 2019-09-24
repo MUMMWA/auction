@@ -30,6 +30,7 @@ import { AdminListProductsComponent } from './admin-list-products/admin-list-pro
 import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.component';
 import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 import { WinningsComponent } from './winnings/winnings.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { WinningsComponent } from './winnings/winnings.component';
     AdminListProductsComponent,
     ConfirmDialogeComponent,
     AdminEditProductComponent,
-    WinningsComponent
+    WinningsComponent,
+    AboutComponent
 
   ],
   imports: [

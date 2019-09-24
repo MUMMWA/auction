@@ -24,4 +24,15 @@ export class UserService {
   getWinnings() {
     return this.http.get(this.bidsUrl + '/winnings');
   }
+
+  // notificationCounter(num) {
+
+  //   if (!localStorage.getItem('notificationCounter')) {
+  //     localStorage.setItem('notificationCounter', '0')
+  //   }
+
+  //   let counter = localStorage.getItem('notificationCounter');
+  //   localStorage.setItem('notificationCounter', parseInt(counter) + num)
+
+  // }
 }
