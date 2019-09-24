@@ -1,3 +1,21 @@
-<div *ngFor="let product of winnings">
-    product
+<div *ngIf="winnings.length <= 0">
+    <h1>You didn't win any bids yet</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row no-gutters products">
+        <div class="col-6 col-md-6 col-lg-4" *ngFor="let item of winnings">
+            <a class="item">
+                <!-- <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid product-image"> -->
+                <div class="item-info">
+                    <h3>{{item.product.name}}</h3>
+                    <span class="collection d-block">{{item.product.description | trim:20 }}</span>
+                    <strong class="price">Won : {{item.amount | currency}}</strong>
+                    <div class="mt-15">
+                        <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>

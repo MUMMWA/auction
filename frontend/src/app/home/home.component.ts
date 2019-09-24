@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
           }
           );
-          console.log(this.productsArray);
+          // console.log(this.productsArray);
         },
         error => console.log(error)
       )

@@ -71,7 +71,7 @@
                         <div class="item-info">
                             <h3>{{product.name}}</h3>
                             <span class="collection d-block">{{product.description | trim:20 }}</span>
-                            <strong class="price">Highest Bid : {{product.highest_bid.amount}}</strong>
+                            <strong class="price" *ngIf="product.highest_bid!=undefined && product.highest_bid.amount!=undefined">Highest Bid : {{product.highest_bid.amount | currency}}</strong>
                             <div class="mt-15">
                                 <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
                             </div>
