@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   AfterViewInit,
   OnDestroy,
@@ -8,15 +8,16 @@ import {
 } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
-import {ProductsService} from "../_services/products.service";
-import {ActivatedRoute} from "@angular/router";
+import { ProductsService } from "../_services/products.service";
+import { ActivatedRoute } from "@angular/router";
 import { Location as L } from '@angular/common';
 
 @Component({
   selector: 'app-payment-c',
   template: `
-    <h2>Increase your Bid</h2>
+    
     <div class="container"> 
+    <h2 class="page-title-c">Increase your Bid</h2>
     <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout mt-100">
       <div class="form-row">
         <label for="card-info">Card Info</label>
@@ -33,9 +34,9 @@ import { Location as L } from '@angular/common';
   styleUrls: ['./payment.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
+export class PaymentComponent implements AfterViewInit, OnDestroy, OnInit {
   @ViewChild("cardInfo", { static: true }) cardInfo: ElementRef;
-   productId;
+  productId;
 
   card: any;
   cardHandler = this.onChange.bind(this);
@@ -44,7 +45,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   lastBid: number;
   loading = false;
 
-  constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService,private _location: L) { }
+  constructor(private route: ActivatedRoute, private cd: ChangeDetectorRef, private productService: ProductsService, private _location: L) { }
 
   ngAfterViewInit() {
     this.card = elements.create('card');
@@ -79,7 +80,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
         this._location.back();
 
       } else {
-        console.log("bid error",data);
+        console.log("bid error", data);
         this.error = data['msg'];
       }
 
@@ -87,10 +88,10 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
     },
       error1 => {
         this.loading = false;
-        console.log("bid error",error1);
+        console.log("bid error", error1);
         this.error = error1;
       },
-      () =>  this.loading = false
+      () => this.loading = false
     );
     const { token, error } = await stripe.createToken(this.card);
 
@@ -108,7 +109,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
       this.productId = params['id'];
       this.lastBid = params['lastBid'];
       this.currentBid = params['currentBid'];
-//      this.product = JSON.parse(localStorage.getItem(params['id']));
+      //      this.product = JSON.parse(localStorage.getItem(params['id']));
     });
 
   }
