@@ -19,8 +19,8 @@ const cron = require('./helpers/cron');
 //init
 const port = process.port || 8888;
 const app = express();
-//dbNotifications.init();
-//cron.init();
+dbNotifications.init();
+cron.init();
 
 //Conf
 app.disable('x-powered-by');
