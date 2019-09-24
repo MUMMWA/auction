@@ -6,20 +6,20 @@ import { UserService } from '../_services/user.service';
   templateUrl: './winnings.component.html',
   styleUrls: ['./winnings.component.css']
 })
-export class WinningsComponent implements OnInit {
+export class WinningsComponent {
 
   constructor(private userService: UserService) { }
 
-  public winnings;
+  winnings;
   ngOnInit(): void {
-    this.userService.getWinnings()
-      .subscribe(
-        res => {
-          this.winnings = res['products'];
-          console.log(this.winnings)
-        },
-        error => console.log(error)
-      )
+    this.winnings = this.userService.getWinnings().subscribe(
+      res => {
+        this.winnings = res['products']
+        console.log(this.winnings);
+
+      },
+      err => console.log(err)
+    )
   }
 
 }

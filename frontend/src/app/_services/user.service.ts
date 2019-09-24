@@ -24,5 +24,4 @@ export class UserService {
   getWinnings() {
     return this.http.get(this.bidsUrl + '/winnings');
   }
-
 }
