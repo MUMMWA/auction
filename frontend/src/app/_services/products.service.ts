@@ -9,7 +9,7 @@ export class ProductsService {
 
   productsUrl: string = 'http://localhost:8888/api/products/protected/';
   publicProductsUrl: string = 'http://localhost:8888/api/publicproducts';
-  bidsUrl: string = 'http://localhost:8888/api/bids';
+
 
   constructor(private http: HttpClient) { }
 
@@ -46,11 +46,9 @@ export class ProductsService {
   }
 
   getLastBid(productId) {
-    return this.http.get(this.bidsUrl+'/product/'+productId);
+    return this.http.get(this.bidsUrl + '/product/' + productId);
   }
 
-  getWinnings(){
-    return this.http.get(this.bidsUrl+'/winnings');
-  }
+
 
 }
