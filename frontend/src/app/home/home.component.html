@@ -27,103 +27,16 @@
 
     </div> -->
 
-    <div class="site-section">
-        <div class="container">
-            <div class="row">
-                <div class="title-section text-center col-12">
-                    <h2 class="text-uppercase">HOT DEALS</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 block-3 products-wrap">
-                    <div class="nonloop-block-3 owl-carousel">
 
-                        <div class="product">
-                            <a href="#" class="item">
-                                <img src="./assets/images/product_1.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>The Shoe</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50</strong>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product">
-                            <a href="#" class="item">
-                                <span class="tag">Sale</span>
-                                <img src="./assets/images/product_2.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>Marc Jacobs Bag</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50
-                                        <del>$30.00</del>
-                                    </strong>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product">
-                            <a href="#" class="item">
-                                <img src="./assets/images/product_3.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>The Belt</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50</strong>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product">
-                            <a href="#" class="item">
-                                <img src="./assets/images/product_1.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>The Shoe</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50</strong>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product">
-                            <a href="#" class="item">
-                                <span class="tag">Sale</span>
-                                <img src="./assets/images/product_2.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>Marc Jacobs Bag</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50
-                                        <del>$30.00</del>
-                                    </strong>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product">
-                            <a href="#" class="item">
-                                <img src="./assets/images/product_3.jpg" alt="Image" class="img-fluid">
-                                <div class="item-info">
-                                    <h3>The Belt</h3>
-                                    <span class="collection d-block">Summer Collection</span>
-                                    <strong class="price">$9.50</strong>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="site-blocks-cover inner-page py-5" data-aos="fade">
+    <div class="site-blocks-cover inner-page py-5" data-aos="fade" *ngIf="!currentUser">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 ml-auto order-lg-2 align-self-start">
                     <div class="site-block-cover-content">
-                        <h2 class="sub-title">#New Summer Collection 2019</h2>
-                        <h1>Sign up NOW and Get 30% Coupon</h1>
-                        <p>
-
+                        <h2 class="sub-title">Register now to: </h2>
+                        <h1>Get 30% discound</h1>
+                        <h2 class="sub-title">On your first purchase</h2>
+                        <p class="mt-50">
                             <a [routerLink]="[ '/register' ]" class="btn btn-black rounded-0">Register</a>
                         </p>
                     </div>
@@ -135,22 +48,33 @@
         </div>
     </div>
 
+
     <div class="products-wrap mt-100 border-top-0">
         <div class="container-fluid">
-            <div class="row no-gutters products">
+            <div class="row">
+                <div class="title-section text-center col-12">
+                    <h2 class="text-uppercase">Open for BIDS</h2>
+                </div>
+            </div>
+            <div class="row no-gutters products mt-50">
 
                 <div class="col-6 col-md-6 col-lg-4" *ngFor="let product of productsArray">
                     <a class="item">
+                        <!-- <p>
+                                    Ends by {{product.end_time | date:'yyyy-MM-dd-hh-mm-ss'}}
+                                </p> -->
+
+                        <div class="mt-15">
+                            <countdown [config]="{leftTime: product.timer}"></countdown>
+                        </div>
                         <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid product-image">
                         <div class="item-info">
                             <h3>{{product.name}}</h3>
                             <span class="collection d-block">{{product.description | trim:20 }}</span>
-                            <strong class="price">$9.50</strong>
-                            <br>
-                            <countdown [config]="{leftTime: product.timer}"></countdown>
-                            <br>
-                            <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
-
+                            <!-- <strong class="price">Highest Bid : {{product.highest_bid.amount}}</strong> -->
+                            <div class="mt-15">
+                                <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
+                            </div>
                         </div>
                     </a>
                 </div>

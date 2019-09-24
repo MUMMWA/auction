@@ -548,7 +548,8 @@ a {
     text-align: center;
     display: block;
     position: relative;
-    border-bottom: 1px solid #eee; min-height: 500px; }
+    border-bottom: 1px solid #eee; min-height: 500px;
+    border-top: 1px solid #eee; }
     .products .item .tag, .product .item .tag {
       position: absolute;
       background: #ffe5ae;
