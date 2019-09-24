@@ -23,12 +23,11 @@
         <countdown [config]="{leftTime: product.timer}"></countdown>
         <p>{{product.description}}</p>
 
-        <strong class="text-primary h4">$50.00</strong>
-
-
-
+        <strong class="text-primary h4">Last Bid:</strong>
+        <br>
+        <input  matInput type="number" placeholder="$ bid" #bid value ="{{lastBid}}"/>
         <p>
-          <a class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary mt-15" (click)="goToPayment()">Icrease the bid</a>
+          <a class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary mt-15" (click)="goToPayment()">Place bid</a>
 
         </p>
 

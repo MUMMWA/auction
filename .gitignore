@@ -1,3 +1,7 @@
 backend/access.log
 .iml
 *.iml
+.idea/
+.idea
+.idea/*
+frontend/src/assets/img/login-bg.jpg

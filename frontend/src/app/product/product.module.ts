@@ -4,6 +4,7 @@ import { ProductComponent } from './product.component';
 import { TrimPipe } from "../_pipes/trim.pipe";
 import { AngularMaterialModule } from "../material-module";
 import { CountdownModule } from "ngx-countdown";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -12,7 +13,8 @@ import { CountdownModule } from "ngx-countdown";
   imports: [
     CommonModule,
     AngularMaterialModule,
-    CountdownModule
+    CountdownModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductModule { }

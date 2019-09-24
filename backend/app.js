@@ -11,12 +11,17 @@ const userRouter = require('./Routes/userRouter');
 const productRouter=require('./Routes/productRouter');
 const bidsRouter = require('./Routes/bidsRouter');
 const publicProductRouter = require('./Routes/publicProductRouter');
+const dbNotifications = require('./DB/dbNotification');
+const cron = require('./helpers/cron');
 
 
 
 //init
 const port = process.port || 8888;
 const app = express();
+dbNotifications.init();
+cron.init();
+
 //Conf
 app.disable('x-powered-by');
 
@@ -28,10 +33,15 @@ let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {
 app.use(morgan('common', { stream: accessLogStream }));
 app.use(helmet());
 app.use(cors());
+app.use(function (req,res,next) {
+    req.dbN = dbNotifications;
+    return next();
+});
 //custom middleware
 app.use('/api/Users/protected', authorization);
 app.use('/api/products/protected', authorization);
 app.use('/api/bids', authorization);
+
 
 
 //Routing

@@ -31,7 +31,13 @@
                         </li>
 
                         <li>
+                            <a routerLink="/products">About</a>
+                        </li>
+                        <li>
                             <a routerLink="/products">Products</a>
+                        </li>
+                        <li>
+                            <a routerLink="/products">Contact US</a>
                         </li>
 
                     </ul>
@@ -49,7 +55,7 @@
                 <a href="#" class="icons-btn d-inline-block" (click)="logout()" *ngIf="currentUser">
                     <span class="icon-sign-out"></span>
                 </a>
-                <a href="#" class="icons-btn d-inline-block bag">
+                <a href="#" class="icons-btn d-inline-block bag" [routerLink]="['/winnings']" *ngIf="currentUser">
                     <span class="icon-bell"></span>
                     <span class="number">2</span>
                 </a>
