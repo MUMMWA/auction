@@ -4,3 +4,4 @@ backend/access.log
 .idea/
 .idea
 .idea/*
+frontend/src/assets/img/login-bg.jpg
