@@ -4,16 +4,18 @@
 
             <div class="col-6 col-md-6 col-lg-4" *ngFor="let product of productsArray">
                 <a class="item">
+                    <div class="mt-15">
+                        <countdown [config]="{leftTime: product.timer, notify: [ 2, 5 ]}" (event)="handleEvent($event)"></countdown>
+
+                    </div>
                     <img src="{{product.images[0].imageUrl}}" alt="Image" class="img-fluid product-image">
                     <div class="item-info">
                         <h3>{{product.name}}</h3>
                         <span class="collection d-block">{{product.description | trim:20 }}</span>
                         <strong class="price">Highest Bid : {{product.highest_bid.amount}}</strong>
-                        <br>
-                        <countdown [config]="{leftTime: product.timer, notify: [ 2, 5 ]}" (event)="handleEvent($event)"></countdown>
-                        <br>
-
-                        <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
+                        <div class="mt-15">
+                            <button class="btn btn-outline-primary rounded-0" (click)="goToProduct(product)">PLACE BID</button>
+                        </div>
                     </div>
                 </a>
             </div>
