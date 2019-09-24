@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'productmgmt/edit', component: AdminEditProductComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent,canActivate: [ProtectedGuard] },
-  { path: 'product/:id', component: ProductComponent },
+  { path: 'product/:id', component: ProductComponent,canActivate: [ProtectedGuard]  },
   { path: 'payment/:id', component: PaymentComponent ,canActivate: [ProtectedGuard] },
   { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
   { path: 'payment/:id/:currentBid/:lastBid', component: PaymentComponent, canActivate: [ProtectedGuard] },
