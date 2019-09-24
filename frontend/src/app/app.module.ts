@@ -32,6 +32,7 @@ import { AdminEditProductComponent } from './admin-edit-product/admin-edit-produ
 import { WinningsComponent } from './winnings/winnings.component';
 import { AdminSoldproductListComponent } from './admin-soldproduct-list/admin-soldproduct-list.component';
 import { AboutComponent } from './about/about.component';
+import { SoldProductService } from './_services/sold-product.service';
 
 
 @NgModule({
@@ -71,7 +72,7 @@ import { AboutComponent } from './about/about.component';
   entryComponents: [
     ConfirmDialogeComponent
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService, ProductsService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }, AuthenticationService, ProductsService,SoldProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

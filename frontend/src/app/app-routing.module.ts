@@ -12,6 +12,7 @@ import { AdminListProductsComponent } from './admin-list-products/admin-list-pro
 import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 import { WinningsComponent } from './winnings/winnings.component';
 import { AboutComponent } from './about/about.component';
+import { AdminSoldproductListComponent } from './admin-soldproduct-list/admin-soldproduct-list.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/edit', component: AdminEditProductComponent, canActivate: [ProtectedGuard] },
+  { path: 'soldproducts/list', component: AdminSoldproductListComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },

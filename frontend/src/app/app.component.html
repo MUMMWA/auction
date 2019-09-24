@@ -26,7 +26,9 @@
                                 <li>
                                     <a [routerLink]="['productmgmt','list']">Products List</a>
                                 </li>
-
+                                <li>
+                                    <a [routerLink]="['soldproducts','list']">Sold products List</a>
+                                </li>
                             </ul>
                         </li>
 
@@ -45,7 +47,8 @@
             </div>
             <div class="icons">
 
-                <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser" routerLink>Login</button>
+                <button class="mr-15" mat-stroked-button [routerLink]="['/login']" *ngIf="!currentUser"
+                    routerLink>Login</button>
                 <button mat-stroked-button [routerLink]="['/register']" *ngIf="!currentUser">Register</button>
 
                 <span class="navbar-text" *ngIf="currentUser">
@@ -76,7 +79,8 @@
 
                 <div class="block-7">
                     <h3 class="footer-heading mb-4">About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio
+                        voluptates
                         sed dolorum excepturi iure eaque, aut unde.</p>
                 </div>
                 <div class="block-7">
