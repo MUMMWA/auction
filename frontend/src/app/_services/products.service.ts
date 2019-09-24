@@ -36,6 +36,11 @@ export class ProductsService {
   updateProduct(product: ProductModel) {
     return this.http.put(this.productsUrl + product._id, product);
   }
+
+  getAllPublicProducts() {
+    return this.http.get<ProductModel[]>(this.publicProductsUrl);
+  }
+
   bid(bid) {
     return this.http.post(this.bidsUrl, bid);
   }
@@ -44,8 +49,8 @@ export class ProductsService {
     return this.http.get(this.bidsUrl+'/product/'+productId);
   }
 
-  getAllPublicProducts() {
-    return this.http.get<ProductModel[]>(this.publicProductsUrl);
+  getWinnings(){
+    return this.http.get(this.bidsUrl+'/winnings');
   }
 
 }
