@@ -23,7 +23,7 @@ import {ActivatedRoute} from "@angular/router";
         <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
       </div>
 
-      <button type="submit">Pay $ {{amount}}</button>
+      <button type="submit">Pay $ {{currentBid - lastBid}}</button>
     </form>
     </div>
   `,
@@ -37,7 +37,8 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   card: any;
   cardHandler = this.onChange.bind(this);
   error: string;
-  amount: number;
+  currentBid: number;
+  lastBid: number;
 
   constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService) { }
 
@@ -65,7 +66,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   async onSubmit(form: NgForm) {
     this.productService.bid({
       productId: this.productId,
-      amount: this.amount
+      amount: this.currentBid
     }).subscribe(data => {
       if (data['success'] === 1) {
         console.log("bid data ", data);
@@ -94,7 +95,8 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.productId = params['id'];
-      this.amount = params['amount'];
+      this.lastBid = params['lastBid'];
+      this.currentBid = params['currentBid'];
 //      this.product = JSON.parse(localStorage.getItem(params['id']));
     });
 

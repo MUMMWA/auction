@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
-  { path: 'payment/:id/:amount', component: PaymentComponent, canActivate: [ProtectedGuard] },
+  { path: 'payment/:id/:currentBid/:lastBid', component: PaymentComponent, canActivate: [ProtectedGuard] },
   { path: '**', redirectTo: '' }
 ];
 
