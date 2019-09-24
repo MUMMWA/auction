@@ -2,15 +2,16 @@
 const db = require('./DB/db');
 const express = require('express');
 const fs = require('fs')
-const morgan = require('morgan')
-const path = require('path')
+const morgan = require('morgan');
+const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 const authorization = require('./MiddleWare/authorization');
 const userRouter = require('./Routes/userRouter');
-const productRouter = require('./Routes/productRouter');
-const paymentRouter = require('./Routes/paymentRouter');
+const productRouter=require('./Routes/productRouter');
+const bidsRouter = require('./Routes/bidsRouter');
 const publicProductRouter = require('./Routes/publicProductRouter');
+
 
 
 //init
@@ -30,15 +31,16 @@ app.use(cors());
 //custom middleware
 app.use('/api/Users/protected', authorization);
 app.use('/api/products/protected', authorization);
-app.use('/api/payment', authorization);
+app.use('/api/bids', authorization);
 
 
 //Routing
 app.use('/api/Users', userRouter);
 app.use('/api/products/protected', productRouter);
-app.use('/api/payment', paymentRouter);
+app.use('/api/bids',bidsRouter);
 
 app.use('/api/publicproducts', publicProductRouter);
+
 
 
 //Error handling

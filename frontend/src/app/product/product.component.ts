@@ -9,17 +9,19 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class ProductComponent implements OnInit {
 
    product :any = {};
+   productId;
   constructor(private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.productId = params['id'];
       this.product = JSON.parse(localStorage.getItem(params['id']));
       console.log("product",this.product);
     });
   }
 
   goToPayment(){
-   this.router.navigate(['payment']);
+   this.router.navigate(['payment',this.productId]);
   }
 
 }

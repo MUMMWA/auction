@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {
   AfterViewInit,
   OnDestroy,
@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
+import {ProductsService} from "../_services/products.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-payment-c',
@@ -26,16 +28,17 @@ import { NgForm } from '@angular/forms';
     </div>
   `,
   styleUrls: ['./payment.css'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.Emulated
 })
-export class PaymentComponent implements AfterViewInit, OnDestroy {
+export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   @ViewChild("cardInfo", { static: true }) cardInfo: ElementRef;
+   productId;
 
   card: any;
   cardHandler = this.onChange.bind(this);
   error: string;
 
-  constructor(private cd: ChangeDetectorRef) { }
+  constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService) { }
 
   ngAfterViewInit() {
     this.card = elements.create('card');
@@ -63,9 +66,53 @@ export class PaymentComponent implements AfterViewInit, OnDestroy {
 
     if (error) {
       console.log('Something is wrong:', error);
+      this.productService.bid({
+        productId: this.productId,
+        amount: 777
+      }).subscribe(data => {
+        if (data['success'] === 1) {
+          console.log("bid data ", data);
+          // this.message = data['msg'];
+          // this.addForm.reset();
+          // this.addForm.pristine;
+          // this.addForm.untouched;
+          // this.addForm.clearValidators;
+        } else {
+          console.log("bid error",data);
+          this.error = data['msg'];
+        }
+        // this.loading = false;
+
+      });
     } else {
       console.log('Success!', token);
+       this.productService.bid({
+         productId: this.productId,
+         amount: 777
+       }).subscribe(data => {
+          if (data['success'] === 1) {
+            console.log("bid data ", data);
+            // this.message = data['msg'];
+            // this.addForm.reset();
+            // this.addForm.pristine;
+            // this.addForm.untouched;
+            // this.addForm.clearValidators;
+          } else {
+            console.log("bid error",data);
+            this.error = data['msg'];
+          }
+          // this.loading = false;
+
+        });
       // ...send the token to the your backend to process the charge
     }
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.productId = params['id'];
+//      this.product = JSON.parse(localStorage.getItem(params['id']));
+    });
+
   }
 }
