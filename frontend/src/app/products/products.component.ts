@@ -16,6 +16,8 @@ export class ProductsComponent implements OnInit {
   products = [];
   productsArray = [];
 
+  currentDate = new Date();
+
   ngOnInit() {
     this.productsService.getProducts()
       .subscribe(
@@ -46,8 +48,8 @@ export class ProductsComponent implements OnInit {
     this.route.navigate(['product', product._id]);
   }
 
-  handleEvent(e) {
-    console.log(e);
-  }
+  // handleEvent(e) {
+  //   console.log(e);
+  // }
 
 }
