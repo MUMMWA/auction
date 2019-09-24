@@ -187,3 +187,50 @@ module.exports.sell = async (product) => {
         }
     };
 
+module.exports.getLastBid =  async (req, res) => {
+
+    // Request validation
+    try {
+        if (!req.body) {
+
+            return res.status(400).send({
+                success: 0, msg: "Payment content can not be empty"
+            });
+        }
+
+
+
+
+        let product = await Product.findById(req.params.productId);
+        console.log("product found", product);
+
+        let bids = product.bids
+             .filter(e => e.user.user_id === req.user.id)
+             .sort(function(a, b) {
+             a = new Date(a.time);
+             b = new Date(b.time);
+             return a>b ? -1 : a<b ? 1 : 0;
+         });
+        console.log("bids found", bids);
+
+        if(bids.length > 0){
+            res.send({success: 1, msg: "", bid: bids[0]});
+        }else{
+            res.send({success: 1, msg: "", bid: {amount:0}});
+        }
+
+
+
+    } catch (err) {
+        if (err.kind === 'ObjectId') {
+            return res.status(404).send({
+                success: 0, msg: "Product not found with id " + req.params.productId
+            });
+        }
+        console.log("error in last bid ", err);
+        return res.status(500).send({
+            success: 0, msg: "Something wrong retrieving product with id " + req.params.productId
+        });
+    }
+};
+

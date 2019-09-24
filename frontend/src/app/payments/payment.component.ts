@@ -65,7 +65,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   async onSubmit(form: NgForm) {
     this.productService.bid({
       productId: this.productId,
-      amount: 777
+      amount: this.amount
     }).subscribe(data => {
       if (data['success'] === 1) {
         console.log("bid data ", data);
@@ -87,24 +87,6 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
       console.log('Something is wrong:', error);
     } else {
       console.log('Success!', token);
-       this.productService.bid({
-         productId: this.productId,
-         amount: this.amount
-       }).subscribe(data => {
-          if (data['success'] === 1) {
-            console.log("bid data ", data);
-            // this.message = data['msg'];
-            // this.addForm.reset();
-            // this.addForm.pristine;
-            // this.addForm.untouched;
-            // this.addForm.clearValidators;
-          } else {
-            console.log("bid error",data);
-            this.error = data['msg'];
-          }
-          // this.loading = false;
-
-        });
       // ...send the token to the your backend to process the charge
     }
   }
