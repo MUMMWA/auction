@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'home', redirectTo: '' },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },
-  { path: 'product/:id', component: ProductComponent },
+  { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
   { path: 'payment/:id', component: PaymentComponent, canActivate: [ProtectedGuard] },
   { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
   { path: 'payment/:id/:currentBid/:lastBid', component: PaymentComponent, canActivate: [ProtectedGuard] },
