@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/cron.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/cron.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/soldProducts.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Routes/soldProductRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/_services/sold-product.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/admin-soldproduct-list/admin-soldproduct-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/admin-soldproduct-list/admin-soldproduct-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productREST.http" beforeDir="false" afterPath="$PROJECT_DIR$/productREST.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/_services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/_services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+              <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -256,12 +269,12 @@
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
       <workItem from="1569264699621" duration="29330000" />
-      <workItem from="1569337168159" duration="14144000" />
+      <workItem from="1569337168159" duration="14506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43474000" />
+    <option name="totallyTimeSpent" value="43836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="651" height="744" extended-state="4" />
@@ -404,7 +417,7 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
         </state>
       </provider>
     </entry>

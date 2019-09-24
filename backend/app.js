@@ -13,7 +13,7 @@ const bidsRouter = require('./Routes/bidsRouter');
 const publicProductRouter = require('./Routes/publicProductRouter');
 const dbNotifications = require('./DB/dbNotification');
 const cron = require('./helpers/cron');
-
+const soldProductRouter=require('./Routes/soldProductRouter');
 
 
 //init
@@ -42,13 +42,14 @@ app.use(function (req,res,next) {
 app.use('/api/Users/protected', authorization);
 app.use('/api/products/protected', authorization);
 app.use('/api/bids', authorization);
-
+app.use('/api/soldproducts/protected', authorization);
 
 
 
 //Routing
 app.use('/api/Users', userRouter);
 app.use('/api/products/protected', productRouter);
+app.use('/api/soldproducts/protected', soldProductRouter);
 app.use('/api/bids',bidsRouter);
 
 app.use('/api/publicproducts', publicProductRouter);

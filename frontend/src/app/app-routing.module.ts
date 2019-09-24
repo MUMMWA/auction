@@ -11,6 +11,7 @@ import { PaymentComponent } from "./payments/payment.component";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
 import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 import { WinningsComponent } from './winnings/winnings.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -21,9 +22,10 @@ const routes: Routes = [
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/edit', component: AdminEditProductComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
-  { path: 'products', component: ProductsComponent,canActivate: [ProtectedGuard] },
-  { path: 'product/:id', component: ProductComponent,canActivate: [ProtectedGuard]  },
-  { path: 'payment/:id', component: PaymentComponent ,canActivate: [ProtectedGuard] },
+  { path: 'about', component: AboutComponent },
+  { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },
+  { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
+  { path: 'payment/:id', component: PaymentComponent, canActivate: [ProtectedGuard] },
   { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
   { path: 'payment/:id/:currentBid/:lastBid', component: PaymentComponent, canActivate: [ProtectedGuard] },
   { path: 'winnings', component: WinningsComponent, canActivate: [ProtectedGuard] },
