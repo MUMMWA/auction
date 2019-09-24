@@ -580,12 +580,9 @@ a {
       transform: scale(0.8); }
     .products .item .item-info, .product .item .item-info {
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       z-index: 2;
-      width: 100%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+      width: 100%; }
       .products .item .item-info h3, .product .item .item-info h3 {
         color: #000;
         font-size: 1.5rem; }
