@@ -28,6 +28,7 @@ import {ProductModule} from "./product/product.module";
 import {PaymentModule} from "./payments/payment.module";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
 import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.component';
+import { WinningsComponent } from './winnings/winnings.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ConfirmDialogeComponent } from './confirm-dialoge/confirm-dialoge.compo
     AdminAddProductComponent,
     TrimPipe,
     AdminListProductsComponent,
-    ConfirmDialogeComponent
+    ConfirmDialogeComponent,
+    WinningsComponent
 
   ],
   imports: [

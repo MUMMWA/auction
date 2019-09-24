@@ -6,21 +6,23 @@ import { RegisterComponent } from './register/register.component';
 import { ProtectedGuard } from './_guards/protected.guard';
 import { ProductsComponent } from './products/products.component';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
-import {ProductComponent} from "./product/product.component";
-import {PaymentComponent} from "./payments/payment.component";
+import { ProductComponent } from "./product/product.component";
+import { PaymentComponent } from "./payments/payment.component";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
+import { WinningsComponent } from './winnings/winnings.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }, 
+  { path: 'register', component: RegisterComponent },
   { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent, canActivate: [ProtectedGuard] },
   { path: 'product/:id', component: ProductComponent, canActivate: [ProtectedGuard] },
   { path: 'payment/:id/:currentBid/:lastBid', component: PaymentComponent, canActivate: [ProtectedGuard] },
+  { path: 'winnings', component: WinningsComponent, canActivate: [ProtectedGuard] },
   { path: '**', redirectTo: '' }
 ];
 

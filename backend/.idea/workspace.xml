@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/bidsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/bidsRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -249,12 +255,12 @@
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
       <workItem from="1569264699621" duration="29330000" />
-      <workItem from="1569337168159" duration="5501000" />
+      <workItem from="1569337168159" duration="5580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34831000" />
+    <option name="totallyTimeSpent" value="34910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
