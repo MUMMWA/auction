@@ -3,6 +3,7 @@ import { ProductsService } from '../_services/products.service';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProductModel } from '../_models/product.Model';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
   selector: 'app-admin-add-product',
@@ -60,9 +61,9 @@ export class AdminAddProductComponent implements OnInit {
           if (data['success'] === 1) {
             this.message = data['msg'];
             this.addForm.reset();
-            this.addForm.pristine;
-            this.addForm.untouched;
-            this.addForm.clearValidators();
+            this.addForm.markAsPristine();
+            this.addForm.markAsUntouched;
+
 
           }
           else {
@@ -77,8 +78,28 @@ export class AdminAddProductComponent implements OnInit {
   get f() { return this.addForm.controls; }
 
   reset() {
+    //this.router.navigate(['productmgmt', 'add']);
+    // console.log('reset');
     this.addForm.reset();
-    console.log('reset');
+    // this.addForm.markAsPristine();
+    // this.addForm.markAsUntouched();
+    //this.addForm.updateValueAndValidity();
+    //Object.keys(this.addForm.controls).forEach(key => {
+    //this.addForm.get(key).setErrors(null, { emitEvent: true });
+    //this.addForm.get(key).updateValueAndValidity();
+    //});
+
+    // setTimeout(() => {
+    //   this.addForm = this.formBuilder.group({
+    //     name: ['', Validators.required],
+    //     description: ['', Validators.required],
+    //     start_time: ['', Validators.required],
+    //     end_time: ['', Validators.required],
+    //     images: this.formBuilder.array([this.initItemRows()])
+    //   });
+    // }, 0);
+
+
 
   }
 }
