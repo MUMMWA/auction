@@ -85,7 +85,7 @@ export class AdminEditProductComponent implements OnInit {
     this.formArr.removeAt(index);
   }
 
-  get f() { return this.editForm.controls; }
+  get f() :any { return this.editForm.controls; }
 
   reset() {
     this.router.navigate(['productmgmt', 'list']);

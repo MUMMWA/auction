@@ -52,9 +52,12 @@ app.use('/api/products/protected', productRouter);
 app.use('/api/bids',bidsRouter);
 
 app.use('/api/publicproducts', publicProductRouter);
+app.use('/',express.static(__dirname+'/public/lab14/'));
+/*
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/lab14/'));
+    res.sendFile(path.join(__dirname , '/public/lab14/'));
 });
+*/
 
 
 
