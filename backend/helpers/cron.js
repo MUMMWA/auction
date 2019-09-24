@@ -4,8 +4,8 @@ const bidsController = require('../Controllers/bids.controller');
 
 module.exports = {
     init: () => {
-        cron.schedule("* * * * *", function () {
-            console.log("running a task every minute");
+        cron.schedule("* * * * * *", function () {
+            console.log("running a task every second");
             Product.find()
                 .then(products => {
                     let date = new Date();

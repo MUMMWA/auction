@@ -23,7 +23,9 @@
         <countdown [config]="{leftTime: product.timer}"></countdown>
         <p>{{product.description}}</p>
 
-        <strong class="text-primary h4">Last Bid:</strong>
+        <strong class="text-primary h4">Highest Bid: $ {{highestBid}}</strong>
+        <br>
+        <strong class="text-primary h4">Last Bid: $ {{lastBid}} </strong>
         <br>
         <input  matInput type="number" placeholder="$ bid" #bid value ="{{lastBid}}"/>
         <p>

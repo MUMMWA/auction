@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
    product :any = {};
    productId;
    lastBid: number = 0;
+   highestBid: number = 0;
 
   constructor(private route: ActivatedRoute,private router: Router, private productsService: ProductsService) { }
 
@@ -24,6 +25,9 @@ export class ProductComponent implements OnInit {
         .subscribe((res:any) => {
               console.log("last bid:::",res);
               this.lastBid = res.bid.amount;
+                if(res.highest_bid != undefined){
+                  this.highestBid = res.highest_bid.amount;
+                }
 
               },
           error => console.log("last bid error ",error)

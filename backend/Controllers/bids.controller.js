@@ -216,9 +216,9 @@ module.exports.getLastBid =  async (req, res) => {
         console.log("bids found", bids);
 
         if(bids.length > 0){
-            res.send({success: 1, msg: "", bid: bids[0]});
+            res.send({success: 1, msg: "", highest_bid: product.highest_bid,bid: bids[0]});
         }else{
-            res.send({success: 1, msg: "", bid: {amount:0}});
+            res.send({success: 1, msg: "",highest_bid: product.highest_bid, bid: {amount:0}});
         }
 
 
