@@ -9,6 +9,7 @@ import { AdminAddProductComponent } from './admin-add-product/admin-add-product.
 import {ProductComponent} from "./product/product.component";
 import {PaymentComponent} from "./payments/payment.component";
 import { AdminListProductsComponent } from './admin-list-products/admin-list-products.component';
+import { AdminEditProductComponent } from './admin-edit-product/admin-edit-product.component';
 
 
 const routes: Routes = [
@@ -17,10 +18,11 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent }, 
   { path: 'productmgmt/add', component: AdminAddProductComponent, canActivate: [ProtectedGuard] },
   { path: 'productmgmt/list', component: AdminListProductsComponent, canActivate: [ProtectedGuard] },
+  { path: 'productmgmt/edit', component: AdminEditProductComponent, canActivate: [ProtectedGuard] },
   { path: 'home', redirectTo: '' },
   { path: 'products', component: ProductsComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'payment/:id', component: PaymentComponent },
+  { path: 'payment/:id', component: PaymentComponent ,canActivate: [ProtectedGuard] },
   { path: '**', redirectTo: '' }
 ];
 
