@@ -10,10 +10,12 @@ import {
 import { NgForm } from '@angular/forms';
 import {ProductsService} from "../_services/products.service";
 import {ActivatedRoute} from "@angular/router";
+import { Location as L } from '@angular/common';
 
 @Component({
   selector: 'app-payment-c',
   template: `
+    <h2>Increase your Bid</h2>
     <div class="container"> 
     <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout mt-100">
       <div class="form-row">
@@ -24,6 +26,7 @@ import {ActivatedRoute} from "@angular/router";
       </div>
 
       <button type="submit">Pay $ {{currentBid - lastBid}}</button>
+      <img *ngIf="loading" src="../../assets/img/loading.gif" />
     </form>
     </div>
   `,
@@ -39,8 +42,9 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   error: string;
   currentBid: number;
   lastBid: number;
+  loading = false;
 
-  constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService) { }
+  constructor(private route: ActivatedRoute,private cd: ChangeDetectorRef,private productService: ProductsService,private _location: L) { }
 
   ngAfterViewInit() {
     this.card = elements.create('card');
@@ -64,24 +68,30 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
   }
 
   async onSubmit(form: NgForm) {
+    this.loading = true;
     this.productService.bid({
       productId: this.productId,
       amount: this.currentBid
     }).subscribe(data => {
+      this.loading = false;
       if (data['success'] === 1) {
         console.log("bid data ", data);
-        // this.message = data['msg'];
-        // this.addForm.reset();
-        // this.addForm.pristine;
-        // this.addForm.untouched;
-        // this.addForm.clearValidators;
+        this._location.back();
+
       } else {
         console.log("bid error",data);
         this.error = data['msg'];
       }
-      // this.loading = false;
 
-    });
+
+    },
+      error1 => {
+        this.loading = false;
+        console.log("bid error",error1);
+        this.error = error1;
+      },
+      () =>  this.loading = false
+    );
     const { token, error } = await stripe.createToken(this.card);
 
     if (error) {
@@ -90,6 +100,7 @@ export class PaymentComponent implements AfterViewInit, OnDestroy,OnInit {
       console.log('Success!', token);
       // ...send the token to the your backend to process the charge
     }
+
   }
 
   ngOnInit(): void {

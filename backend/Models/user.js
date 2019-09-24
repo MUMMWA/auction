@@ -19,7 +19,8 @@ var userSchema = mongoose.Schema({
         product:{
             product_id:String,
             name:String,
-            description:String
+            description:String,
+            images: [Object]
         }
     }],
     winnings: [
@@ -29,7 +30,8 @@ var userSchema = mongoose.Schema({
             product:{
                 product_id:String,
                 name:String,
-                description:String
+                description:String,
+                images: [Object]
             }
         }
     ]

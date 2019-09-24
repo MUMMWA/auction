@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/winnings/winnings.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/bidsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/bidsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/_services/products.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/bids.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/bids.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/admin-add-product/admin-add-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/payments/payment.component_old.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/product/product.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,21 +29,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="-1887">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
-                <element signature="e#200#2055#0" />
                 <element signature="e#2124#2743#0" />
+                <element signature="e#2808#3498#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Routes/userRouter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="166" selection-start-line="64" selection-start-column="166" selection-end-line="64" selection-end-column="166" />
             </state>
           </provider>
         </entry>
@@ -50,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/Routes/bidsRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -58,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -76,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="150">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -85,8 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="347">
+              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -104,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/helpers/cron.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -145,7 +147,6 @@
         <option value="$PROJECT_DIR$/Routes/paymentRouter.js" />
         <option value="$PROJECT_DIR$/Models/product.js" />
         <option value="$PROJECT_DIR$/helpers/jwtHelper.js" />
-        <option value="$PROJECT_DIR$/Models/user.js" />
         <option value="$PROJECT_DIR$/Controllers/payment.controller.js" />
         <option value="$PROJECT_DIR$/Routes/userRouter.js" />
         <option value="$PROJECT_DIR$/MiddleWare/authorization.js" />
@@ -155,8 +156,10 @@
         <option value="$PROJECT_DIR$/Controllers/product.controller.js" />
         <option value="$PROJECT_DIR$/helpers/cron.js" />
         <option value="$PROJECT_DIR$/Routes/bidsRouter.js" />
-        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Models/user.js" />
         <option value="$PROJECT_DIR$/Controllers/bids.controller.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -167,10 +170,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="319" />
-    <option name="y" value="63" />
+    <option name="x" value="500" />
+    <option name="y" value="-4" />
     <option name="width" value="649" />
-    <option name="height" value="772" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,6 +218,11 @@
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="Routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -255,12 +263,12 @@
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
       <workItem from="1569264699621" duration="29330000" />
-      <workItem from="1569337168159" duration="5580000" />
+      <workItem from="1569337168159" duration="8673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34910000" />
+    <option name="totallyTimeSpent" value="38003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -273,7 +281,7 @@
       <window_info id="npm" order="4" side_tool="true" />
       <window_info id="Learn" order="5" />
       <window_info id="Designer" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.33705178" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.33625498" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -368,21 +376,14 @@
     <entry file="file://$PROJECT_DIR$/helpers/cron.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Routes/bidsRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -393,27 +394,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="45">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        <state relative-caret-position="-1887">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
-            <element signature="e#200#2055#0" />
             <element signature="e#2124#2743#0" />
+            <element signature="e#2808#3498#0" />
           </folding>
         </state>
       </provider>

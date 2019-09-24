@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
    product :any = {};
    productId;
    lastBid: number = 0;
+
   constructor(private route: ActivatedRoute,private router: Router, private productsService: ProductsService) { }
 
   ngOnInit() {
