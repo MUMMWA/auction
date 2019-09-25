@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   loading = false;
   error;
   message;
+  isRegisterd = false;
 
   public get f() {
     return this.registerForm.controls;
@@ -72,10 +73,19 @@ export class RegisterComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          //this.alertService.success('Registration successful', true);
           if (data['success'] === 1) {
             this.message = data['msg']
-            this.router.navigate(['/login']);
+            setTimeout(() => {
+              this.authenticationService.login(this.f.email.value, this.f.password.value)
+              .pipe(first())
+              .subscribe(
+                data => {
+                  if (data != null) {
+                      this.router.navigate(['home']);
+                  }
+                });
+            }, 4000);
+            this.isRegisterd = true;
           }
           else {
             this.error = data['msg'];
@@ -83,9 +93,7 @@ export class RegisterComponent implements OnInit {
           }
         },
         error => {
-          //this.alertService.error(error);
           this.loading = false;
-
         })
   }
 }
