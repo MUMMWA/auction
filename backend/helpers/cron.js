@@ -4,7 +4,7 @@ const bidsController = require('../Controllers/bids.controller');
 
 module.exports = {
     init: () => {
-        cron.schedule("*/10 * * * * *", function () {
+        cron.schedule("*/20 * * * * *", function () {
             console.log("exp check::");
             Product.find()
                 .then(products => {

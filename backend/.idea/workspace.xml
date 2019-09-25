@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954bd119-9608-46e9-b64b-cfdf632041d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/soldProducts.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routes/soldProductRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/_services/sold-product.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/about/about.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/admin-soldproduct-list/admin-soldproduct-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/admin-soldproduct-list/admin-soldproduct-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productREST.http" beforeDir="false" afterPath="$PROJECT_DIR$/productREST.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/_services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/_services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/cron.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/cron.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,12 +21,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
+            <state relative-caret-position="330">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="e#2124#2743#0" />
                 <element signature="e#2808#3498#0" />
-                <element signature="e#3561#4935#0" />
                 <element signature="e#4987#6842#0" />
               </folding>
             </state>
@@ -82,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="825">
               <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
             </state>
           </provider>
@@ -105,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers/cron.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="90">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -219,6 +205,11 @@
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="MiddleWare" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,16 +260,15 @@
       <option name="presentableId" value="Default" />
       <updated>1569264695652</updated>
       <workItem from="1569264699621" duration="29330000" />
-      <workItem from="1569337168159" duration="14506000" />
+      <workItem from="1569337168159" duration="16826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43836000" />
+    <option name="totallyTimeSpent" value="46156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="651" height="744" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -287,7 +277,7 @@
       <window_info id="npm" order="4" side_tool="true" />
       <window_info id="Learn" order="5" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="7" weight="0.3625498" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.47603306" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -311,38 +301,6 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="npm" order="4" side_tool="true" />
-      <window_info id="Learn" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.3625498" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" visible="true" weight="0.06278027" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -414,13 +372,6 @@
     <entry file="file://$PROJECT_DIR$/public/lab14/styles.83ada7489b704c2eb8b5.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Routes/userRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -442,19 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
-          <folding>
-            <element signature="e#2124#2743#0" />
-            <element signature="e#2808#3498#0" />
-            <element signature="e#3561#4935#0" />
-            <element signature="e#4987#6842#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controllers/product.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
@@ -472,10 +410,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/bids.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+          <folding>
+            <element signature="e#2124#2743#0" />
+            <element signature="e#2808#3498#0" />
+            <element signature="e#4987#6842#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helpers/cron.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
         </state>
       </provider>
     </entry>
